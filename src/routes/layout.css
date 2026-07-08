@@ -12,11 +12,22 @@
   --color-lavander-200: #737C9D;
 
   --text-shadow-boldest: 0px 1px, 1px 0px, 1px 1px;
-
   --text-middle: 3.4rem;
 }
 
 body {
   @apply font-work;
   @apply bg-cream-100;
+}
+
+.highlight {
+  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=cbcedd) no-repeat center;
+  background-size: 100% 100%;
+  padding: 0rem 1rem 0.3rem;
+}
+
+.highlightDark {
+  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=525667) no-repeat center;
+  background-size: 100% 100%;
+  padding: 0rem 1rem 0.3rem;
 }

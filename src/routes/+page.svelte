@@ -1,31 +1,54 @@
 <script>
+  import { onMount } from "svelte";
   import cv from "$lib/assets/cv/cv.pdf"
   import star from "$lib/assets/stars/starOne.png";
   import Home from "$lib/components/Home.svelte";
+  import About from "$lib/components/About.svelte";
+
+  let activeSection = $state('home');
+
+  onMount(() => {
+    const sections = document.querySelectorAll('section[id]');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            activeSection = entry.target.id;
+          }
+        });
+      },
+      {
+        threshold: 0.7,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  });
 </script>
 
 <nav class="w-full items-center fixed z-10 text-2xl justify-between flex px-16 py-6 font-light bg-cream-100">
-  <a href="#home">Home</a>
-  <a href="#about">About Me</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
+  <a class="{activeSection === 'home' ? "highlight" : ""}" href="#home">Home</a>
+  <a class="{activeSection === 'about' ? "highlight" : ""}" href="#about">About Me</a>
+  <a class="{activeSection === 'skills' ? "highlight" : ""}" href="#skills">Skills</a>
+  <a class="{activeSection === 'projects' ? "highlightDark" : ""}" href="#projects">Projects</a>
   <a class="flex flex-row items-center" target="_blank" href="{cv}">
     <img class="h-8" src={star} alt="star"/>CV
     <img class="h-8" src={star} alt="star"/>
   </a>
 </nav>
 
-<div class=" *:even:bg-coal-100 *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll">
-  <div id="home">
+<div class="[&>.dark]:bg-coal-100 *:snap-start *:pt-6 flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
+  <section class="snap-start" id="home">
     <Home />
-  </div>
-  <div id="about">
+  </section>
+  <section class="snap-start" id="about">
+    <About />
+  </section>
+  <section class="snap-start" id="skills">
     <Home />
-  </div>
-  <div id="skills">
+  </section>
+  <section class="dark snap-start" id="projects">
     <Home />
-  </div>
-  <div id="projects">
-    <Home />
-  </div>
+  </section>
 </div>
