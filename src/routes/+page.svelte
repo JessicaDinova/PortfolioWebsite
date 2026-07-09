@@ -1,6 +1,6 @@
 <script>
   import { onMount } from "svelte";
-  import star from "$lib/assets/stars/starOne.png";
+  import star from "$lib/assets/stars/star1.png";
   import Home from "$lib/pageCards/Home.svelte";
   import About from "$lib/pageCards/About.svelte";
   import Skills from "$lib/pageCards/Skills.svelte"
