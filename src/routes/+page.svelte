@@ -1,21 +1,21 @@
 <script>
   import { onMount } from "svelte";
-  import cv from "$lib/assets/cv/cv.pdf"
   import star from "$lib/assets/stars/starOne.png";
-  import Home from "$lib/components/Home.svelte";
-  import About from "$lib/components/About.svelte";
+  import Home from "$lib/pageCards/Home.svelte";
+  import About from "$lib/pageCards/About.svelte";
+  import Skills from "$lib/pageCards/Skills.svelte"
+  import Projects from "$lib/pageCards/Projects.svelte"
 
   let activeSection = $state('home');
+  let darkSections = ["Projects", "PageBuilder", "ManageMe"]
 
   onMount(() => {
     const sections = document.querySelectorAll('section[id]');
     const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
+      (entries) => { entries.forEach((entry) => {
           if (entry.isIntersecting) {
             activeSection = entry.target.id;
-          }
-        });
+          }});
       },
       {
         threshold: 0.7,
@@ -27,18 +27,18 @@
   });
 </script>
 
-<nav class="w-full items-center fixed z-10 text-2xl justify-between flex px-16 py-6 font-light bg-cream-100">
+<nav class="w-full items-center fixed z-10 text-2xl justify-between flex px-16 pt-6 pb-2 font-light bg-cream-100 {``}">
   <a class="{activeSection === 'home' ? "highlight" : ""}" href="#home">Home</a>
   <a class="{activeSection === 'about' ? "highlight" : ""}" href="#about">About Me</a>
   <a class="{activeSection === 'skills' ? "highlight" : ""}" href="#skills">Skills</a>
   <a class="{activeSection === 'projects' ? "highlightDark" : ""}" href="#projects">Projects</a>
-  <a class="flex flex-row items-center" target="_blank" href="{cv}">
+  <a class="flex flex-row items-center" target="_blank" href="/cv/cv.pdf">
     <img class="h-8" src={star} alt="star"/>CV
     <img class="h-8" src={star} alt="star"/>
   </a>
 </nav>
 
-<div class="[&>.dark]:bg-coal-100 *:snap-start *:pt-6 flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
+<div class="[&>.dark]:bg-coal-100 *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
   <section class="snap-start" id="home">
     <Home />
   </section>
@@ -46,9 +46,9 @@
     <About />
   </section>
   <section class="snap-start" id="skills">
-    <Home />
+    <Skills />
   </section>
   <section class="dark snap-start" id="projects">
-    <Home />
+    <Projects />
   </section>
 </div>
