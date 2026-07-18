@@ -7,7 +7,7 @@
   import Projects from "$lib/pageCards/Projects.svelte"
 
   let activeSection = $state('home');
-  let darkSections = ["Projects", "PageBuilder", "ManageMe"]
+  let darkSections = ["projects", "pageBuilder", "manageMe"]
 
   onMount(() => {
     const sections = document.querySelectorAll('section[id]');
@@ -27,7 +27,7 @@
   });
 </script>
 
-<nav class="w-full items-center fixed z-10 text-2xl justify-between flex px-16 pt-6 pb-2 font-light bg-cream-100 {``}">
+<nav class="w-full items-center fixed z-10 text-2xl justify-between flex px-16 pt-6 pb-2 font-light transition-all duration-500 ease-in-out {darkSections.includes(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   <a class="{activeSection === 'home' ? "highlight" : ""}" href="#home">Home</a>
   <a class="{activeSection === 'about' ? "highlight" : ""}" href="#about">About Me</a>
   <a class="{activeSection === 'skills' ? "highlight" : ""}" href="#skills">Skills</a>
@@ -38,7 +38,7 @@
   </a>
 </nav>
 
-<div class="[&>.dark]:bg-coal-100 *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
+<div class="[&>.dark]:bg-coal-100 scrollbar-thin *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
   <section class="snap-start" id="home">
     <Home />
   </section>
