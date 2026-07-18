@@ -5,6 +5,9 @@
   import About from "$lib/pageCards/About.svelte";
   import Skills from "$lib/pageCards/Skills.svelte"
   import Projects from "$lib/pageCards/Projects.svelte"
+  import Article from "$lib/pageCards/Article.svelte"
+  import { articles } from "$lib/helpers/projects";
+  import { createLink } from "$lib/helpers/pageFunctions";
 
   let activeSection = $state('home');
   let darkSections = ["projects", "pageBuilder", "manageMe"]
@@ -39,16 +42,21 @@
 </nav>
 
 <div class="[&>.dark]:bg-coal-100 scrollbar-thin *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
-  <section class="snap-start" id="home">
+  <section id="home">
     <Home />
   </section>
-  <section class="snap-start" id="about">
+  <section id="about">
     <About />
   </section>
-  <section class="snap-start" id="skills">
+  <section id="skills">
     <Skills />
   </section>
-  <section class="dark snap-start" id="projects">
+  <section class="dark" id="projects">
     <Projects />
   </section>
+  {#each articles as article}
+    <section class="{article.darkStyle ? "dark" : ""}" id="{createLink(article.title)}">
+      <Article articleImg={article.img} articleLink={article.link} articleText={article.text} articleTitle={article.title} articleDark={article.darkStyle}/>
+    </section>
+  {/each}
 </div>

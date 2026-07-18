@@ -5,16 +5,7 @@
 
   import queenDoodle from "$lib/assets/doodles/queen.png";
   import { projects } from "$lib/helpers/projects";
-
-  /**
-   * Create a href link for smoothScrolling based on project name
-   * @param {string} projectName name of the project
-   */
-  function createLink(projectName) {
-    let projectLink = projectName.replace(/\s/g, "");
-    projectLink = projectLink[0].toLowerCase() + projectLink.slice(1);
-    return projectLink;
-  }
+  import { createLink } from "$lib/helpers/pageFunctions";
 </script>
 
 <div
