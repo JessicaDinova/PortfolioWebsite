@@ -9,7 +9,7 @@
 </script>
 
 <div
-  class="w-full h-screen relative overflow-hidden justify-center items-center flex flex-row gap-20"
+  class="main relative overflow-hidden justify-center items-center flex flex-row gap-20"
 >
   <img
     class="w-[15%] absolute bottom-0 left-0"

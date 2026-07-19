@@ -70,9 +70,23 @@ export const projects = [
 export const articles = [
   {
     title: "Page Builder",
-    text: "bla bla bla bla bla bla bla",
-    img: pageBuilderFullImg,
-    darkStyle: true
+    text: `This application allows users to keep track of
+              their habits, emotions and deepest thoughts
+              that connect to their emotions. We also allowed
+              them to share these thoughts on map if they
+              wish to do so.
+              We also attended a "Dragons Den" which was a
+              knock-off version of Shark Tank. We got all the
+              "money" and once again, this project won.
+              Did i mention there is also a robot connected to
+              the app?`,
+    darkStyle: true,
+    imgConfig: {
+      imgLeft: true,
+      img: pageBuilderFullImg,
+      size: "h-100 object-scale-down"
+    },
+    tech: ["Angular", "TypeScript", "C#", "Anthropic API", "SCSS"]
   },
   {
     title: "Looney",
@@ -86,11 +100,16 @@ export const articles = [
               "money" and once again, this project won.
               Did i mention there is also a robot connected to
               the app?`,
-    img: looneyFullImg,
     link: "https://github.com/Team-07-Looney/looney-general",
+    imgConfig: {
+      imgLeft: false,
+      img:looneyFullImg,
+      size: "h-140"
+    },
+    tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "TypeScript"]
   },
   {
-    title: "Curious village",
+    title: "Curious Village",
     text: `My first project in school was to create an
               educational game concerning data safety
               for children. Our game was voted the best
@@ -98,13 +117,32 @@ export const articles = [
               first little victory.
               During this project I learned the basics of
               working agile.`,
-    img: curiousVillageImg,
     link: "https://github.com/HZ-2223/oop-team22",
+    imgConfig: {
+      imgLeft: true,
+      img: curiousVillageImg,
+      size: "h-90"
+    },
+    tech: ["TypeScript"]
   },
   {
     title: "Manage Me",
-    text: "bla bla bla bla bla bla bla",
-    img: manageMeFullImg,
-    darkStyle: true
+    text: `This application allows users to keep track of
+              their habits, emotions and deepest thoughts
+              that connect to their emotions. We also allowed
+              them to share these thoughts on map if they
+              wish to do so.
+              We also attended a "Dragons Den" which was a
+              knock-off version of Shark Tank. We got all the
+              "money" and once again, this project won.
+              Did i mention there is also a robot connected to
+              the app?`,
+    darkStyle: true,
+    imgConfig: {
+      imgLeft: false,
+      img: manageMeFullImg,
+      size: "h-100 object-scale-down"
+    },
+    tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
   }
 ]

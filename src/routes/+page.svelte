@@ -30,11 +30,11 @@
   });
 </script>
 
-<nav class="w-full items-center fixed z-10 text-2xl justify-between flex px-16 pt-6 pb-2 font-light transition-all duration-500 ease-in-out {darkSections.includes(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
+<nav class="w-full items-center fixed z-50 text-2xl h-18 justify-between flex px-16 pt-6 pb-2 font-light transition-all duration-500 ease-in-out {darkSections.includes(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   <a class="{activeSection === 'home' ? "highlight" : ""}" href="#home">Home</a>
   <a class="{activeSection === 'about' ? "highlight" : ""}" href="#about">About Me</a>
   <a class="{activeSection === 'skills' ? "highlight" : ""}" href="#skills">Skills</a>
-  <a class="{activeSection === 'projects' ? "highlightDark" : ""}" href="#projects">Projects</a>
+  <a class="{darkSections.includes(activeSection) ? "highlightDark" : ""}" href="#projects">Projects</a>
   <a class="flex flex-row items-center" target="_blank" href="/cv/cv.pdf">
     <img class="h-8" src={star} alt="star"/>CV
     <img class="h-8" src={star} alt="star"/>
@@ -56,7 +56,7 @@
   </section>
   {#each articles as article}
     <section class="{article.darkStyle ? "dark" : ""}" id="{createLink(article.title)}">
-      <Article articleImg={article.img} articleLink={article.link} articleText={article.text} articleTitle={article.title} articleDark={article.darkStyle}/>
+      <Article articleImg={article.imgConfig} articleLink={article.link} articleText={article.text} articleTitle={article.title} articleDark={article.darkStyle} articleTech={article.tech}/>
     </section>
   {/each}
 </div>
