@@ -70,78 +70,78 @@ export const projects = [
 export const articles = [
   {
     title: "Page Builder",
-    text: `This application allows users to keep track of
-              their habits, emotions and deepest thoughts
-              that connect to their emotions. We also allowed
-              them to share these thoughts on map if they
-              wish to do so.
-              We also attended a "Dragons Den" which was a
-              knock-off version of Shark Tank. We got all the
-              "money" and once again, this project won.
-              Did i mention there is also a robot connected to
-              the app?`,
+    text: `During my graduation <span class="font-medium text-lavander-100">internship at Syntess</span>, I designed and built a 
+            custom page builder that lets users <span class="font-medium text-lavander-100">drag, drop, and design</span> ERP system 
+            pages without writing a single line of a JSON page definition file. 
+            For the days when even dragging feels like too much, I added an 
+            <span class="font-medium text-lavander-100">Anthropic AI</span> chatbot that generates entire page definitions from a single 
+            prompt. No more guessing whether that JSON is valid! Just describe the 
+            page and watch it appear.`,
     darkStyle: true,
     imgConfig: {
       imgLeft: true,
       img: pageBuilderFullImg,
-      size: "h-100 object-scale-down"
+      size: "h-100",
+      doodles: [
+        { img: stickerRight1, styling: "-right-13 -top-13" },
+        { img: stickerRight2, styling: "-left-13 -bottom-13" },
+      ],
     },
     tech: ["Angular", "TypeScript", "C#", "Anthropic API", "SCSS"]
   },
   {
     title: "Looney",
-    text: `This application allows users to keep track of
-              their habits, emotions and deepest thoughts
-              that connect to their emotions. We also allowed
-              them to share these thoughts on map if they
-              wish to do so.
-              We also attended a "Dragons Den" which was a
-              knock-off version of Shark Tank. We got all the
-              "money" and once again, this project won.
-              Did i mention there is also a robot connected to
-              the app?`,
+    text: `A school project that grew into something we were genuinely proud of. 
+            A web app where users track routines, log emotions, and share their 
+            deepest thoughts on an interactive map. I created and designed Looney (a mascot), 
+            who celebrates finished routines. We pitched the project at a "Shark Tank" style 
+            school competition and walked away with the best project! Did I mention there 
+            is also a robot connected to the app?`,
     link: "https://github.com/Team-07-Looney/looney-general",
     imgConfig: {
       imgLeft: false,
-      img:looneyFullImg,
-      size: "h-140"
+      img: looneyFullImg,
+      size: "h-140",
+      doodles: [
+        { img: stickerBottom, styling: "-top-8" },
+        { img: stickerTop, styling: "-bottom-8" }
+      ],
     },
     tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "TypeScript"]
   },
   {
     title: "Curious Village",
-    text: `My first project in school was to create an
-              educational game concerning data safety
-              for children. Our game was voted the best
-              one from the whole class which was my
-              first little victory.
-              During this project I learned the basics of
-              working agile.`,
+    text: `My first school project was an educational game teaching kids not to share personal 
+            info online. We designed and built everything ourselves, from animations to game 
+            mechanics. Players befriend animals and complete quests. But each animal starts 
+            asking suspicious questions along the way. Based on the choices, you get a "hacked" 
+            or "thanks for playing" screen. A little scary but effective, the kids loved it 
+            so much they voted it the best project in class.`,
     link: "https://github.com/HZ-2223/oop-team22",
     imgConfig: {
       imgLeft: true,
       img: curiousVillageImg,
-      size: "h-90"
+      size: "h-90",
+      doodles: [
+        { img: stickerLeft1, styling: "-left-13 -top-14" },
+        { img: stickerLeft2, styling: "-right-13 -bottom-14" },
+      ],
     },
     tech: ["TypeScript"]
   },
   {
     title: "Manage Me",
-    text: `This application allows users to keep track of
-              their habits, emotions and deepest thoughts
-              that connect to their emotions. We also allowed
-              them to share these thoughts on map if they
-              wish to do so.
-              We also attended a "Dragons Den" which was a
-              knock-off version of Shark Tank. We got all the
-              "money" and once again, this project won.
-              Did i mention there is also a robot connected to
-              the app?`,
+    text: `For my first internship, I designed and built a web app "ManageMe" for an HZ teacher, 
+            replacing hand-drawn models with an interactive tool. Users can create, edit, and 
+            export two complex management models: a DNA Diagnosis Wheel and an Ecosystemic 
+            Mind Map (based on a book). The app supports drag-and-drop, undo/redo, color picker, 
+            Dutch and English, and more!`,
     darkStyle: true,
     imgConfig: {
       imgLeft: false,
       img: manageMeFullImg,
-      size: "h-100 object-scale-down"
+      size: "h-100",
+      doodles: [{ img: stickerTop, styling: "-top-8" }],
     },
     tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
   }
