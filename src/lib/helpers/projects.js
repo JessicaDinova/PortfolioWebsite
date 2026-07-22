@@ -70,12 +70,12 @@ export const projects = [
 export const articles = [
   {
     title: "Page Builder",
-    text: `During my graduation <span class="font-medium text-lavander-100">internship at Syntess</span>, I designed and built a 
-            custom page builder that lets users <span class="font-medium text-lavander-100">drag, drop, and design</span> ERP system 
+    text: `During my graduation **internship at Syntess**, I designed and built a 
+            custom page builder that lets users **drag, drop, and design** ERP system 
             pages without writing a single line of a JSON page definition file. 
             For the days when even dragging feels like too much, I added an 
-            <span class="font-medium text-lavander-100">Anthropic AI</span> chatbot that generates entire page definitions from a single 
-            prompt. No more guessing whether that JSON is valid! Just describe the 
+            **Anthropic AI** **chatbot** that generates entire page definitions from a single 
+            prompt. No more guessing whether that **JSON is valid!** Just describe the 
             page and watch it appear.`,
     darkStyle: true,
     imgConfig: {
@@ -91,13 +91,14 @@ export const articles = [
   },
   {
     title: "Looney",
-    text: `A school project that grew into something we were genuinely proud of. 
-            A web app where users track routines, log emotions, and share their 
-            deepest thoughts on an interactive map. I created and designed Looney (a mascot), 
-            who celebrates finished routines. We pitched the project at a "Shark Tank" style 
-            school competition and walked away with the best project! Did I mention there 
-            is also a robot connected to the app?`,
+    text: `A **school project** that grew into something we were genuinely proud of. 
+            A **web app** where users track routines, log emotions, and share their thoughts 
+            on an **interactive map**. I created and designed Looney (a mascot), who celebrates 
+            finished routines. We pitched the project at a **"Shark Tank"** style school 
+            competition and walked away with the **best project!** Did I mention there is 
+            also a **robot** connected to the app?`,
     link: "https://github.com/Team-07-Looney/looney-general",
+    darkStyle: false,
     imgConfig: {
       imgLeft: false,
       img: looneyFullImg,
@@ -111,13 +112,15 @@ export const articles = [
   },
   {
     title: "Curious Village",
-    text: `My first school project was an educational game teaching kids not to share personal 
-            info online. We designed and built everything ourselves, from animations to game 
-            mechanics. Players befriend animals and complete quests. But each animal starts 
-            asking suspicious questions along the way. Based on the choices, you get a "hacked" 
-            or "thanks for playing" screen. A little scary but effective, the kids loved it 
-            so much they voted it the best project in class.`,
+    text: `My first **school project** was an **educational game** teaching 
+            kids not to share personal info online. We designed and built everything 
+            ourselves, from **animations** to **game mechanics**. Players befriend animals 
+            and complete quests. But each animal starts asking suspicious questions 
+            along the way. Based on the choices, you get a **"hacked"** or **"thanks for playing"** 
+            screen. A little scary but effective, the kids loved it so much they voted it 
+            the **best project** in class.`,
     link: "https://github.com/HZ-2223/oop-team22",
+    darkStyle: false,
     imgConfig: {
       imgLeft: true,
       img: curiousVillageImg,
@@ -131,11 +134,11 @@ export const articles = [
   },
   {
     title: "Manage Me",
-    text: `For my first internship, I designed and built a web app "ManageMe" for an HZ teacher, 
+    text: `For my **first internship**, I designed and built a **web app** "ManageMe" for an HZ teacher, 
             replacing hand-drawn models with an interactive tool. Users can create, edit, and 
-            export two complex management models: a DNA Diagnosis Wheel and an Ecosystemic 
-            Mind Map (based on a book). The app supports drag-and-drop, undo/redo, color picker, 
-            Dutch and English, and more!`,
+            export two complex **management models**: a DNA Diagnosis Wheel and an Ecosystemic 
+            Mind Map (based on a book). The app supports **drag-and-drop**, **undo/redo**, color picker, 
+            Dutch and English, and more! The app is **online** and ready to use.`,
     darkStyle: true,
     imgConfig: {
       imgLeft: false,
