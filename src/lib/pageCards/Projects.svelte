@@ -19,12 +19,7 @@
   {#each projects as project}
     <a href="#{createLink(project.name)}">
       <div class="relative flex justify-center hover:scale-105 duration-100">
-        <Description
-          description={project.description.text}
-          descriptionImg={project.description.img}
-          descriptionStyling={project.description.styling}
-          descriptionRotate={project.description.rotation}
-        />
+        <Description description={project.description}/>
         <ProjectCard projectName={project.name} projectImg={project.img} />
         {#each project.doodles as doodle}
           <Sticker stickerImg={doodle.img} stickerStyling={doodle.styling} />

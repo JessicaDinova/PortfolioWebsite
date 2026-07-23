@@ -2,6 +2,6 @@
   let {stickerStyling, stickerDoodle=false, stickerImg} = $props();
 </script>
 
-<div class="absolute {stickerStyling} {stickerDoodle ? "" : "opacity-55"} scale-75 z-10">
-  <img class="w-32" src="{stickerImg}" alt="sticker">
+<div class="absolute z-10 {stickerStyling} {stickerDoodle ? "" : "opacity-55 scale-75"}">
+  <img class="{stickerDoodle ? "" : "w-32"}" src="{stickerImg}" alt="sticker">
 </div>

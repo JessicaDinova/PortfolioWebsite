@@ -15,6 +15,14 @@ import arrow4 from "$lib/assets/arrows/arrow4.png";
 import looneyFullImg from "$lib/assets/projectImages/looneyFull.png";
 import pageBuilderFullImg from "$lib/assets/projectImages/pageBuilderFull.png";
 import manageMeFullImg from "$lib/assets/projectImages/manageMeFull.png";
+import dragon from "$lib/assets/doodles/dragonDoodle.png";
+import robot from "$lib/assets/doodles/robotDoodle.png";
+import cup from "$lib/assets/doodles/cupDoodle.png";
+import controller from "$lib/assets/doodles/controllerDoodle.png";
+import drag from "$lib/assets/doodles/dragDoodle.png";
+import puzzle from "$lib/assets/doodles/puzzleDoodle.png";
+import book from "$lib/assets/doodles/bookDoodle.png";
+import chart from "$lib/assets/doodles/chartDoodle.png";
 
 export const projects = [
   {
@@ -82,11 +90,15 @@ export const articles = [
       imgLeft: true,
       img: pageBuilderFullImg,
       size: "h-100",
-      doodles: [
+      stickers: [
         { img: stickerRight1, styling: "-right-13 -top-13" },
         { img: stickerRight2, styling: "-left-13 -bottom-13" },
       ],
     },
+    doodles: [
+      { img: drag, styling: "w-29 -top-16 right-8 -rotate-30" },
+      { img: puzzle, styling: "w-76 -bottom-28 -right-160" },
+    ],
     tech: ["Angular", "TypeScript", "C#", "Anthropic API", "SCSS"]
   },
   {
@@ -103,11 +115,15 @@ export const articles = [
       imgLeft: false,
       img: looneyFullImg,
       size: "h-140",
-      doodles: [
+      stickers: [
         { img: stickerBottom, styling: "-top-8" },
         { img: stickerTop, styling: "-bottom-8" }
       ],
     },
+    doodles: [
+      { img: robot, styling: "w-29 -left-152 -top-12" },
+      { img: dragon, styling: "w-47 -bottom-32 -right-52" },
+    ],
     tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "TypeScript"]
   },
   {
@@ -125,11 +141,15 @@ export const articles = [
       imgLeft: true,
       img: curiousVillageImg,
       size: "h-90",
-      doodles: [
+      stickers: [
         { img: stickerLeft1, styling: "-left-13 -top-14" },
         { img: stickerLeft2, styling: "-right-13 -bottom-14" },
       ],
     },
+    doodles: [
+      { img: cup, styling: "w-29 -top-20 -right-32" },
+      { img: controller, styling: "w-36 -bottom-12 right-36" },
+    ],
     tech: ["TypeScript"]
   },
   {
@@ -144,8 +164,12 @@ export const articles = [
       imgLeft: false,
       img: manageMeFullImg,
       size: "h-100",
-      doodles: [{ img: stickerTop, styling: "-top-8" }],
+      stickers: [{ img: stickerTop, styling: "-top-8" }],
     },
+    doodles: [
+      { img: chart, styling: "w-29 -top-16 left-56" },
+      { img: book, styling: "w-32 -bottom-20 -left-36 -rotate-30" },
+    ],
     tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
   }
 ]

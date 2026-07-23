@@ -1,5 +1,5 @@
 <script>
-  let {projectImg, projectName, projectRotation = "0"} = $props();
+  let {projectImg, projectName} = $props();
 </script>
 
   <div class="w-64 h-72 p-3 flex flex-col gap-3 bg-cream-100 hover:cursor-pointer shadow-2xl">

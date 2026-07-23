@@ -56,7 +56,7 @@
   </section>
   {#each articles as article}
     <section class="{article.darkStyle ? "dark" : ""}" id="{createLink(article.title)}">
-      <Article articleImg={article.imgConfig} articleLink={article.link} articleText={article.text} articleTitle={article.title} articleDark={article.darkStyle} articleTech={article.tech}/>
+      <Article article={article}/>
     </section>
   {/each}
 </div>
