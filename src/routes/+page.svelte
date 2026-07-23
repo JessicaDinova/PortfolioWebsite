@@ -5,6 +5,9 @@
   import About from "$lib/pageCards/About.svelte";
   import Skills from "$lib/pageCards/Skills.svelte"
   import Projects from "$lib/pageCards/Projects.svelte"
+  import Article from "$lib/pageCards/Article.svelte"
+  import { articles } from "$lib/helpers/projects";
+  import { createLink } from "$lib/helpers/pageFunctions";
 
   let activeSection = $state('home');
   let darkSections = ["projects", "pageBuilder", "manageMe"]
@@ -27,11 +30,11 @@
   });
 </script>
 
-<nav class="w-full items-center fixed z-10 text-2xl justify-between flex px-16 pt-6 pb-2 font-light transition-all duration-500 ease-in-out {darkSections.includes(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
+<nav class="w-full items-center fixed z-50 text-2xl h-18 justify-between flex px-16 pt-6 pb-2 font-light transition-all duration-500 ease-in-out {darkSections.includes(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   <a class="{activeSection === 'home' ? "highlight" : ""}" href="#home">Home</a>
   <a class="{activeSection === 'about' ? "highlight" : ""}" href="#about">About Me</a>
   <a class="{activeSection === 'skills' ? "highlight" : ""}" href="#skills">Skills</a>
-  <a class="{activeSection === 'projects' ? "highlightDark" : ""}" href="#projects">Projects</a>
+  <a class="{darkSections.includes(activeSection) ? "highlightDark" : ""}" href="#projects">Projects</a>
   <a class="flex flex-row items-center" target="_blank" href="/cv/cv.pdf">
     <img class="h-8" src={star} alt="star"/>CV
     <img class="h-8" src={star} alt="star"/>
@@ -39,16 +42,21 @@
 </nav>
 
 <div class="[&>.dark]:bg-coal-100 scrollbar-thin *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
-  <section class="snap-start" id="home">
+  <section id="home">
     <Home />
   </section>
-  <section class="snap-start" id="about">
+  <section id="about">
     <About />
   </section>
-  <section class="snap-start" id="skills">
+  <section id="skills">
     <Skills />
   </section>
-  <section class="dark snap-start" id="projects">
+  <section class="dark" id="projects">
     <Projects />
   </section>
+  {#each articles as article}
+    <section class="{article.darkStyle ? "dark" : ""}" id="{createLink(article.title)}">
+      <Article article={article}/>
+    </section>
+  {/each}
 </div>

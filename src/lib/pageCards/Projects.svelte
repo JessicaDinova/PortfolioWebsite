@@ -5,35 +5,21 @@
 
   import queenDoodle from "$lib/assets/doodles/queen.png";
   import { projects } from "$lib/helpers/projects";
-
-  /**
-   * Create a href link for smoothScrolling based on project name
-   * @param {string} projectName name of the project
-   */
-  function createLink(projectName) {
-    let projectLink = projectName.replace(/\s/g, "");
-    projectLink = projectLink[0].toLowerCase() + projectLink.slice(1);
-    return projectLink;
-  }
+  import { createLink } from "$lib/helpers/pageFunctions";
 </script>
 
 <div
-  class="w-full h-screen relative overflow-hidden justify-center items-center flex flex-row gap-20"
+  class="main relative overflow-hidden justify-center items-center flex flex-row gap-20"
 >
   <img
-    class="w-[15%] absolute bottom-0 left-0"
+    class="w-[13%] absolute bottom-0 left-0"
     src={queenDoodle}
     alt="doodle"
   />
   {#each projects as project}
     <a href="#{createLink(project.name)}">
       <div class="relative flex justify-center hover:scale-105 duration-100">
-        <Description
-          description={project.description.text}
-          descriptionImg={project.description.img}
-          descriptionStyling={project.description.styling}
-          descriptionRotate={project.description.rotation}
-        />
+        <Description description={project.description}/>
         <ProjectCard projectName={project.name} projectImg={project.img} />
         {#each project.doodles as doodle}
           <Sticker stickerImg={doodle.img} stickerStyling={doodle.styling} />

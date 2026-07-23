@@ -7,6 +7,7 @@
 
   --color-cream-100: #F4F0ED;
   --color-coal-100: #313131;
+  --color-lavander-50: #a2abce2d;
   --color-lavander-100: #A2ABCE;
   --color-lavander-200: #737C9D;
 
@@ -15,18 +16,21 @@
 }
 
 body {
-  @apply font-work;
-  @apply bg-cream-100;
+  @apply font-work bg-cream-100;
 }
 
 .highlight {
-  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=cbcedd) no-repeat center;
+  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=cbcedd) no-repeat center;
   background-size: 100% 100%;
-  padding: 0rem 1rem 0.3rem;
+  padding: 0rem 0.8rem 0.2rem;
 }
 
 .highlightDark {
-  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-8&color=525667) no-repeat center;
+  background: url(//s2.svgbox.net/pen-brushes.svg?ic=brush-9&color=525667) no-repeat center;
   background-size: 100% 100%;
-  padding: 0rem 1rem 0.3rem;
+  padding: 0rem 1rem 0.2rem;
+}
+
+.main {
+  @apply w-full h-screen pt-18
 }
