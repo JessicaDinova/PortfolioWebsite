@@ -3,7 +3,7 @@
 </script>
 
 <div class="main font-light flex flex-row justify-center gap-[10%] items-center">
-  <img class="w-112.5" src="{profilePic}" alt="profilePic">
+  <img class="w-112.5 drop-shadow-2xl" src="{profilePic}" alt="profilePic">
   <article class="text-3xl text-right">
     I am a recent software engineering graduate in<br/><span class="highlight">the Netherlands,</span><br/>
     trying to achieve my dream of designing<br/>and<span class="highlight">creating
