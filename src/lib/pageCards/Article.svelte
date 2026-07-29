@@ -15,7 +15,7 @@
 <div class="main gap-32 overflow-hidden justify-center items-center flex {flexDirection} {darkModeText}">
   <div class="relative w-[40%] max-w-3xl flex flex-col gap-7">  
     {#each article.doodles as doodle}
-      <Sticker stickerStyling={doodle.styling} stickerImg={doodle.img} stickerDoodle={true}/>
+      <Sticker sticker={doodle}/>
     {/each}
     <div class="flex flex-row gap-2 {justifyDirection}">
       <h1 class="text-4xl uppercase font-hand font-medium text-lavander-100 text-shadow-boldest">{article.title}</h1>
@@ -44,7 +44,7 @@
   </div>
   <div class="relative flex justify-center items-center">
     {#each article.imgConfig.stickers as sticker}
-      <Sticker stickerStyling={sticker.styling} stickerImg={sticker.img}/>
+      <Sticker sticker={sticker} isDoodle={false}/>
     {/each}
     <img class="{article.imgConfig.size} shadow-xl object-scale-down"  src={article.imgConfig.img} alt={article.title} />
   </div>

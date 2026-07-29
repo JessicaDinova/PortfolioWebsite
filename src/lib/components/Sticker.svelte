@@ -1,7 +1,7 @@
 <script>
-  let {stickerStyling, stickerDoodle=false, stickerImg} = $props();
+  let { sticker, isDoodle=true, animation="", animationDelay="" } = $props();
 </script>
 
-<div class="absolute z-10 {stickerStyling} {stickerDoodle ? "" : "opacity-55 scale-75"}">
-  <img class="{stickerDoodle ? "" : "w-32"}" src="{stickerImg}" alt="sticker">
+<div class="absolute z-10 {sticker.position} {animation} {isDoodle ? "": "opacity-55 size-27"}" style="{animationDelay}">
+  <img class="{sticker.styling}" src="{sticker.img}" alt="sticker">
 </div>

@@ -33,13 +33,13 @@ export const articles = [
       img: pageBuilderFullImg,
       size: "h-100",
       stickers: [
-        { img: stickerRight1, styling: "-right-13 -top-13" },
-        { img: stickerRight2, styling: "-left-13 -bottom-13" },
+        { img: stickerRight1, styling: "", position:"-right-10 -top-10" },
+        { img: stickerRight2, styling: "", position:"-left-10 -bottom-10" },
       ],
     },
     doodles: [
-      { img: drag, styling: "w-29 -top-16 right-8 -rotate-30" },
-      { img: puzzle, styling: "w-76 -bottom-28 -right-160" },
+      { img: drag, styling: "w-29", position:"-top-16 right-8 -rotate-30" },
+      { img: puzzle, styling: "w-76", position:"-bottom-28 -right-160" },
     ],
     tech: ["Angular", "TypeScript", "JSON", "C#", "Anthropic API", "SCSS"]
   },
@@ -58,13 +58,13 @@ export const articles = [
       img: looneyFullImg,
       size: "h-140",
       stickers: [
-        { img: stickerBottom, styling: "-top-8" },
-        { img: stickerTop, styling: "-bottom-8" }
+        { img: stickerBottom, styling:"", position: "-top-8" },
+        { img: stickerTop, styling:"", position: "-bottom-20" }
       ],
     },
     doodles: [
-      { img: robot, styling: "w-29 -left-152 -top-12" },
-      { img: dragon, styling: "w-47 -bottom-32 -right-52" },
+      { img: robot, styling: "w-29", position:"-left-152 -top-12" },
+      { img: dragon, styling: "w-47", position:"-bottom-32 -right-52" },
     ],
     tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "TypeScript"]
   },
@@ -84,13 +84,13 @@ export const articles = [
       img: curiousVillageImg,
       size: "h-90",
       stickers: [
-        { img: stickerLeft1, styling: "-left-13 -top-14" },
-        { img: stickerLeft2, styling: "-right-13 -bottom-14" },
+        { img: stickerLeft1, styling:"", position: "-left-11 -top-11" },
+        { img: stickerLeft2, styling:"", position: "-right-11 -bottom-11" },
       ],
     },
     doodles: [
-      { img: cup, styling: "w-29 -top-20 -right-32" },
-      { img: controller, styling: "w-36 -bottom-12 right-36" },
+      { img: cup, styling: "w-29", position:"-top-20 -right-32"},
+      { img: controller, styling: "w-36", position:"-bottom-12 right-36" },
     ],
     tech: ["TypeScript"]
   },
@@ -106,11 +106,11 @@ export const articles = [
       imgLeft: false,
       img: manageMeFullImg,
       size: "h-100",
-      stickers: [{ img: stickerTop, styling: "-top-8" }],
+      stickers: [{ img: stickerTop, styling: "", position:"-top-8" }],
     },
     doodles: [
-      { img: chart, styling: "w-29 -top-16 left-56" },
-      { img: book, styling: "w-32 -bottom-20 -left-36 -rotate-30" },
+      { img: chart, styling: "w-29", position:"-top-16 left-56" },
+      { img: book, styling: "w-32 -rotate-30", position:"-bottom-20 -left-36" },
     ],
     tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
   }
