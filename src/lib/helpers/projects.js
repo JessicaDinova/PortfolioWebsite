@@ -17,7 +17,7 @@ export const projects = [
   {
     name: "Page Builder",
     img: pageBuilderImg,
-    doodles: [{ img: stickerTop, styling: "-top-8" }],
+    stickers: [{ img: stickerTop, styling: "", position:"-top-8" }],
     description: {
       img: arrow2,
       styling: "-top-25 -left-10",
@@ -27,9 +27,9 @@ export const projects = [
   {
     name: "Looney",
     img: looneyImg,
-    doodles: [
-      { img: stickerLeft1, styling: "-left-14 -top-14" },
-      { img: stickerLeft2, styling: "-right-14 -bottom-14" },
+    stickers: [
+      { img: stickerLeft1, styling: "", position:"-left-10 -top-10" },
+      { img: stickerLeft2, styling: "", position:"-right-10 -bottom-10" },
     ],
     description: {
       img: arrow1,
@@ -40,7 +40,7 @@ export const projects = [
   {
     name: "Curious Village",
     img: curiousVillageImg,
-    doodles: [{ img: stickerBottom, styling: "-top-8" }],
+    stickers: [{ img: stickerBottom, styling: "", position:"-top-8" }],
     description: {
       img: arrow4,
       styling: "flex-col gap-10 -right-25 -top-17",
@@ -51,9 +51,9 @@ export const projects = [
   {
     name: "Manage Me",
     img: manageMeImg,
-    doodles: [
-      { img: stickerRight1, styling: "-right-14 -top-14" },
-      { img: stickerRight2, styling: "-left-14 -bottom-14" },
+    stickers: [
+      { img: stickerRight1, styling: "", position:"-right-10 -top-10" },
+      { img: stickerRight2, styling: "", position:"-left-10 -bottom-10" },
     ],
     description: {
       img: arrow3,
