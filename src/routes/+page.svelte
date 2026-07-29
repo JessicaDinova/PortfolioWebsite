@@ -6,7 +6,7 @@
   import Skills from "$lib/pageCards/Skills.svelte"
   import Projects from "$lib/pageCards/Projects.svelte"
   import Article from "$lib/pageCards/Article.svelte"
-  import { articles } from "$lib/helpers/projects";
+  import { articles } from "$lib/helpers/articles";
   import { createLink } from "$lib/helpers/pageFunctions";
 
   let activeSection = $state('home');
