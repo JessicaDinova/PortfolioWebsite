@@ -27,7 +27,7 @@ export const skills = [
     { name: "css", icon: icons.css },
     { name: "javaScript", icon: icons.javaScript },
     { name: "typeScript", icon: icons.typeScript },
-    { name: "svelte", icon: icons.svelte },
+    { name: "svelteKit", icon: icons.svelteKit },
     { name: "angular", icon: icons.angular },
     { name: "react", icon: icons.react },
     { name: "tailwind", icon: icons.tailwind },

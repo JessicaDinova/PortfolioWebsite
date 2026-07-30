@@ -19,7 +19,7 @@
   --animate-star: star 1.3s ease-in-out infinite;
 
   --height-stretch: stretch;
-  --width-stretch:stretch;
+  --width-stretch: stretch;
 }
 
 @keyframes marquee {
