@@ -20,8 +20,8 @@
     <div class="flex flex-row gap-2 {justifyDirection}">
       <h1 class="text-4xl uppercase font-hand font-medium text-lavander-100 text-shadow-boldest">{article.title}</h1>
       {#if article.link}
-        <a href={article.link}>
-          <img class="h-10" src={githubImg} alt="github" />
+        <a href={article.link} target="_blank">
+          <img class="h-10 hover:scale-105 transition-all ease-in-out" src={githubImg} alt="github" />
         </a>
       {/if}
     </div>

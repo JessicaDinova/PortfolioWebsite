@@ -68,7 +68,7 @@ export const articles = [
       { img: robot, styling: "w-29", position:"-left-152 -top-12" },
       { img: dragon, styling: "w-47", position:"-bottom-32 -right-52" },
     ],
-    tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "TypeScript"]
+    tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "JavaScript"]
   },
   {
     title: "Curious Village",
