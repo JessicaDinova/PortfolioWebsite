@@ -2,10 +2,11 @@
   import Sticker from "$lib/components/Sticker.svelte";
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import Description from "$lib/components/Description.svelte";
-
   import queenDoodle from "$lib/assets/doodles/queen.png";
   import { projects } from "$lib/helpers/projects";
   import { createLink } from "$lib/helpers/pageFunctions";
+
+  let { scrollToSection } = $props();
 </script>
 
 <div
@@ -17,7 +18,7 @@
     alt="doodle"
   />
   {#each projects as project}
-    <a href="#{createLink(project.name)}">
+    <button onclick={() => scrollToSection(createLink(project.name))}>
       <div class="relative flex justify-center hover:scale-105 duration-100">
         <Description description={project.description}/>
         <ProjectCard projectName={project.name} projectImg={project.img} />
@@ -25,6 +26,6 @@
           <Sticker sticker={sticker} isDoodle={false}/>
         {/each}
       </div>
-    </a>
+    </button>
   {/each}
 </div>

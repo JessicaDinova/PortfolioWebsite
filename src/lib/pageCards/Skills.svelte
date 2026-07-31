@@ -9,7 +9,7 @@
 
 <div class="main relative font-light flex flex-col justify-center gap-12 items-center overflow-x-hidden">
   <img
-    class="w-[13%] -rotate-30 hover:rotate-0 transition-all ease-in-out hover:z-30 drop-shadow-2xl hover:opacity-100 opacity-40 absolute top-20 left-10"
+    class="w-[13%] -rotate-30 hover:rotate-0 transitional hover:z-30 drop-shadow-2xl hover:opacity-100 opacity-40 absolute top-20 left-10"
     src={stamp}
     alt="doodle"
   />
