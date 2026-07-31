@@ -1,12 +1,12 @@
 <script>
   import { onMount } from "svelte";
-  import star from "$lib/assets/stars/star1.png";
+  import star from "$lib/assets/doodles/star.svg";
   import Home from "$lib/pageCards/Home.svelte";
   import About from "$lib/pageCards/About.svelte";
   import Skills from "$lib/pageCards/Skills.svelte"
   import Projects from "$lib/pageCards/Projects.svelte"
   import Article from "$lib/pageCards/Article.svelte"
-  import { articles } from "$lib/helpers/projects";
+  import { articles } from "$lib/helpers/articles";
   import { createLink } from "$lib/helpers/pageFunctions";
 
   let activeSection = $state('home');
@@ -36,8 +36,8 @@
   <a class="{activeSection === 'skills' ? "highlight" : ""}" href="#skills">Skills</a>
   <a class="{darkSections.includes(activeSection) ? "highlightDark" : ""}" href="#projects">Projects</a>
   <a class="flex flex-row items-center" target="_blank" href="/cv/cv.pdf">
-    <img class="h-8" src={star} alt="star"/>CV
-    <img class="h-8" src={star} alt="star"/>
+    <img class="h-4" src={star} alt="star"/>CV
+    <img class="h-4" src={star} alt="star"/>
   </a>
 </nav>
 

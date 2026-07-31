@@ -21,8 +21,8 @@
       <div class="relative flex justify-center hover:scale-105 duration-100">
         <Description description={project.description}/>
         <ProjectCard projectName={project.name} projectImg={project.img} />
-        {#each project.doodles as doodle}
-          <Sticker stickerImg={doodle.img} stickerStyling={doodle.styling} />
+        {#each project.stickers as sticker}
+          <Sticker sticker={sticker} isDoodle={false}/>
         {/each}
       </div>
     </a>
