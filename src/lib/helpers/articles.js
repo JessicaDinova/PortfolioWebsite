@@ -1,21 +1,23 @@
 import looneyFullImg from "$lib/assets/projectImages/looneyFull.png";
 import pageBuilderFullImg from "$lib/assets/projectImages/pageBuilderFull.png";
 import manageMeFullImg from "$lib/assets/projectImages/manageMeFull.png";
-import dragon from "$lib/assets/doodles/dragonDoodle.png";
-import robot from "$lib/assets/doodles/robotDoodle.png";
-import cup from "$lib/assets/doodles/cupDoodle.png";
-import controller from "$lib/assets/doodles/controllerDoodle.png";
-import drag from "$lib/assets/doodles/dragDoodle.png";
-import puzzle from "$lib/assets/doodles/puzzleDoodle.png";
-import book from "$lib/assets/doodles/bookDoodle.png";
-import chart from "$lib/assets/doodles/chartDoodle.png";
-import stickerBottom from "$lib/assets/stickers/stickerBottom.png";
-import stickerLeft1 from "$lib/assets/stickers/stickerLeft1.png";
-import stickerLeft2 from "$lib/assets/stickers/stickerLeft2.png";
-import stickerRight1 from "$lib/assets/stickers/stickerRight1.png";
-import stickerRight2 from "$lib/assets/stickers/stickerRight2.png";
-import stickerTop from "$lib/assets/stickers/stickerTop.png";
+import dragon from "$lib/assets/doodles/dragonDoodle.svg";
+import robot from "$lib/assets/doodles/robotDoodle.svg";
+import cup from "$lib/assets/doodles/cupDoodle.svg";
+import controller from "$lib/assets/doodles/controllerDoodle.svg";
+import drag from "$lib/assets/doodles/dragDoodle.svg";
+import puzzle from "$lib/assets/doodles/puzzleDoodle.svg";
+import book from "$lib/assets/doodles/bookDoodle.svg";
+import chart from "$lib/assets/doodles/chartDoodle.svg";
+import stickerBottom from "$lib/assets/stickers/stickerBottom.svg";
+import stickerLeft1 from "$lib/assets/stickers/stickerLeft1.svg";
+import stickerLeft2 from "$lib/assets/stickers/stickerLeft2.svg";
+import stickerRight1 from "$lib/assets/stickers/stickerRight1.svg";
+import stickerRight2 from "$lib/assets/stickers/stickerRight2.svg";
+import stickerTop from "$lib/assets/stickers/stickerTop.svg";
 import curiousVillageImg from "$lib/assets/projectImages/curiousVillage.png";
+import linkedIn from "$lib/assets/doodles/LinkedIn.svg";
+import gitHub from "$lib/assets/doodles/skills/github.svg";
 
 export const articles = [
   {
@@ -66,7 +68,7 @@ export const articles = [
       { img: robot, styling: "w-29", position:"-left-152 -top-12" },
       { img: dragon, styling: "w-47", position:"-bottom-32 -right-52" },
     ],
-    tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "TypeScript"]
+    tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "JavaScript"]
   },
   {
     title: "Curious Village",
@@ -115,3 +117,16 @@ export const articles = [
     tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
   }
 ]
+
+export const aboutMeArticle = {
+  text: `An **honours** graduate in software engineering, based in the **Netherlands**, to whom every
+          **detail matters** (yes... I am the person who will notice your button is 2px off-center). 
+          I am now on a hunt for a **junior** dev role. What I enjoy is creating and designing 
+          **websites** and **web apps** while making sure they feel **nice to use** 
+          (and I chase it in every project I create). Outside of code, you can find me 
+          **working out my brain** with Japanese nonograms, crosswords, sudoku, or any other logical puzzle.`,
+  links: [
+    {img: gitHub, href: "https://github.com/JessicaDinova"},
+    {img: linkedIn, href: "https://www.linkedin.com/in/jessica-diňová-0b182a27a"}
+  ]
+}
