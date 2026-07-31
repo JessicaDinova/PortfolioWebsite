@@ -2,16 +2,16 @@ import looneyImg from "$lib/assets/projectImages/looney.png";
 import curiousVillageImg from "$lib/assets/projectImages/curiousVillage.png";
 import manageMeImg from "$lib/assets/projectImages/manageMe.png";
 import pageBuilderImg from "$lib/assets/projectImages/pageBuilder.png";
-import stickerBottom from "$lib/assets/stickers/stickerBottom.png";
-import stickerLeft1 from "$lib/assets/stickers/stickerLeft1.png";
-import stickerLeft2 from "$lib/assets/stickers/stickerLeft2.png";
-import stickerRight1 from "$lib/assets/stickers/stickerRight1.png";
-import stickerRight2 from "$lib/assets/stickers/stickerRight2.png";
-import stickerTop from "$lib/assets/stickers/stickerTop.png";
-import arrow1 from "$lib/assets/arrows/arrow1.png";
-import arrow2 from "$lib/assets/arrows/arrow2.png";
-import arrow3 from "$lib/assets/arrows/arrow3.png";
-import arrow4 from "$lib/assets/arrows/arrow4.png";
+import stickerBottom from "$lib/assets/stickers/stickerBottom.svg";
+import stickerLeft1 from "$lib/assets/stickers/stickerLeft1.svg";
+import stickerLeft2 from "$lib/assets/stickers/stickerLeft2.svg";
+import stickerRight1 from "$lib/assets/stickers/stickerRight1.svg";
+import stickerRight2 from "$lib/assets/stickers/stickerRight2.svg";
+import stickerTop from "$lib/assets/stickers/stickerTop.svg";
+import arrow1 from "$lib/assets/arrows/arrow1.svg";
+import arrow2 from "$lib/assets/arrows/arrow2.svg";
+import arrow3 from "$lib/assets/arrows/arrow3.svg";
+import arrow4 from "$lib/assets/arrows/arrow4.svg";
 
 export const projects = [
   {
@@ -57,7 +57,7 @@ export const projects = [
     ],
     description: {
       img: arrow3,
-      styling: "flex-col-reverse gap-10 -bottom-27 -right-25",
+      styling: "flex-col-reverse gap-10 -bottom-27 -right-20",
       text: "Internship",
       rotation: "rotate-280",
     },

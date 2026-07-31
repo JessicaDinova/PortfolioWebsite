@@ -1,5 +1,5 @@
 <script>
-  import githubImg from "$lib/assets/doodles/github.png";
+  import githubImg from "$lib/assets/doodles/skills/github.svg";
   import Sticker from "$lib/components/Sticker.svelte";
   import { highlightText } from "$lib/helpers/pageFunctions";
 
