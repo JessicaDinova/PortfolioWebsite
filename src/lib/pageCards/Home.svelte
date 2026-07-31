@@ -18,7 +18,7 @@
   <span class="font-drawn text-middle text-lavander-100 font-black text-shadow-boldest">
     Jessica
   </span></h1>
-  <p class="text-3xl text-right">Wannabe graphic designer and web<br/>developer</p>
+  <p class="text-3xl text-right">Web developer and wannabe graphic<br/> designer</p>
     {#each stars as star}
       <Sticker sticker={star} animation={"animate-star"} animationDelay={`animation-delay: ${Math.floor(Math.random() * 1000)}ms`}/>
     {/each}
