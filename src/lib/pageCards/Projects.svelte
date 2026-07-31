@@ -3,7 +3,7 @@
   import ProjectCard from "$lib/components/ProjectCard.svelte";
   import Description from "$lib/components/Description.svelte";
   import queenDoodle from "$lib/assets/doodles/queen.png";
-  import { projects } from "$lib/helpers/projects";
+  import { projects } from "$lib/data/projects";
   import { createLink } from "$lib/helpers/pageFunctions";
 
   let { scrollToSection } = $props();
