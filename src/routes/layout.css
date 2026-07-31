@@ -58,3 +58,7 @@ body {
 .main {
   @apply w-full h-screen pt-18
 }
+
+.transitional {
+  @apply transition-all ease-in-out
+}

@@ -1,6 +1,6 @@
 <script>
   import profilePic from "$lib/assets/myself/profilePic.png"
-  import { aboutMeArticle } from "$lib/helpers/articles";
+  import { aboutMeArticle } from "$lib/data/articles";
   import { highlightText } from "$lib/helpers/pageFunctions";
   const textSegments = $derived(highlightText(aboutMeArticle.text));
 </script>
@@ -20,7 +20,7 @@
     <div class="flex flex-row-reverse gap-3">
       {#each aboutMeArticle.links as link}
         <a href="{link.href}" target="_blank">
-          <img src="{link.img}" class="h-15 hover:scale-105 transition-all ease-in-out" alt="doodle">
+          <img src="{link.img}" class="h-15 hover:scale-105 transitional" alt="doodle">
         </a>
       {/each}
     </div>
