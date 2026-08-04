@@ -12,7 +12,7 @@
   const textSegments = $derived(highlightText(article.text));
 </script>
 
-<div class="main gap-32 overflow-hidden justify-center items-center flex {flexDirection} {darkModeText}">
+<div class="main gap-32 overflow-hidden justify-center px-10 items-center flex {flexDirection} {darkModeText}">
   <div class="relative w-[40%] max-w-3xl flex flex-col gap-7">  
     {#each article.doodles as doodle}
       <Sticker sticker={doodle}/>
@@ -34,9 +34,9 @@
         {/if}
       {/each}
     </article>
-    <div class="w-full justify-between flex">
+    <div class="w-full justify-between py-2 whitespace-nowrap flex">
       {#each article.tech as tech}
-        <div class="border-2 border-lavander-100 bg-lavander-50 p-3 rounded-4xl hover:scale-105 transition ease-in-out cursor-default">
+        <div class="border-2 border-lavander-100 whitespace-nowrap bg-lavander-50 p-3 rounded-4xl hover:scale-105 transition ease-in-out cursor-default">
           <p>{tech}</p>
         </div>
       {/each}
@@ -46,6 +46,6 @@
     {#each article.imgConfig.stickers as sticker}
       <Sticker sticker={sticker} isDoodle={false}/>
     {/each}
-    <img class="{article.imgConfig.size} shadow-xl object-scale-down"  src={article.imgConfig.img} alt={article.title} />
+    <img class="{article.imgConfig.size} shadow-xl object-cover"  src={article.imgConfig.img} alt={article.title} />
   </div>
 </div>

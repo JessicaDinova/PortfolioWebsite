@@ -41,7 +41,7 @@ export const articles = [
     },
     doodles: [
       { img: drag, styling: "w-29", position:"-top-16 right-8 -rotate-30" },
-      { img: puzzle, styling: "w-76", position:"-bottom-28 -right-160" },
+      { img: puzzle, styling: "w-50", position:"-bottom-20 -right-200" },
     ],
     tech: ["Angular", "TypeScript", "JSON", "C#", "Anthropic API", "SCSS"]
   },

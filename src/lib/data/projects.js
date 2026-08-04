@@ -3,6 +3,7 @@ import curiousVillageImg from "$lib/assets/projectImages/curiousVillage.png";
 import manageMeImg from "$lib/assets/projectImages/manageMe.png";
 import pageBuilderImg from "$lib/assets/projectImages/pageBuilder.png";
 import stickerBottom from "$lib/assets/stickers/stickerBottom.svg";
+import solarPanelImg from "$lib/assets/projectImages/solarPanel.png";
 import stickerLeft1 from "$lib/assets/stickers/stickerLeft1.svg";
 import stickerLeft2 from "$lib/assets/stickers/stickerLeft2.svg";
 import stickerRight1 from "$lib/assets/stickers/stickerRight1.svg";
@@ -33,7 +34,7 @@ export const projects = [
     ],
     description: {
       img: arrow1,
-      styling: "flex-row-reverse -bottom-25 left-60",
+      styling: "flex-row-reverse -bottom-25 left-50",
       text: "Hand drawn",
     },
   },
@@ -43,7 +44,7 @@ export const projects = [
     stickers: [{ img: stickerBottom, styling: "", position:"-top-8" }],
     description: {
       img: arrow4,
-      styling: "flex-col gap-10 -right-25 -top-17",
+      styling: "flex-col gap-10 -right-24 -top-17",
       text: "First game",
       rotation: "rotate-270",
     },
@@ -62,4 +63,15 @@ export const projects = [
       rotation: "rotate-280",
     },
   },
+  {
+    name: "Sun-Lay",
+    img: solarPanelImg,
+    stickers: [{ img: stickerBottom, styling: "", position:"-top-8" }],
+    description: {
+      img: arrow1,
+      styling: "-top-25 right-40",
+      text: "Cost cut",
+      rotation: "rotate-180",
+    },
+  }
 ];
