@@ -64,7 +64,7 @@ export const projects = [
     },
   },
   {
-    name: "Sun-Lay",
+    name: "SunLay",
     img: solarPanelImg,
     stickers: [{ img: stickerBottom, styling: "", position:"-top-8" }],
     description: {

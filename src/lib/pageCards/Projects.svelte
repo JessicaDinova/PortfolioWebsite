@@ -42,7 +42,7 @@
   </button>
   <div class="flex gap-17">
     {#each visibleProjects as project, i (project.name || i)}
-      <button onclick={() => scrollToSection(createLink(project.name))} in:fly={{duration: 200, y:-100}}>
+      <button onclick={() => scrollToSection(createLink(project.name))} in:fly={{duration: 500, y:-100}}>
         <div class="relative flex justify-center hover:scale-105 transitional">
           <Description description={project.description}/>
           <ProjectCard projectName={project.name} projectImg={project.img} />
