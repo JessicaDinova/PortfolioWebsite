@@ -30,3 +30,24 @@
     
     return textSegments;
   }
+
+  /**
+   * Preloads images and caches them in memory to combat flickering while using carousels
+   * @param {*} sources array or array of objects that includes the images
+   * @param {*} keyName extracts images from array of objects (optional)
+   * @returns array of preloaded Image objects
+   * @example
+   * // Preload array of URLs
+   * preloadImages([img1, img2, img3]);
+   * 
+   * // Preload from array of objects
+   * preloadImages(projects, 'img');
+   */
+  export function preloadImages(sources, keyName = null) {
+    return sources.map((source) => {
+      const src = keyName ? source[keyName] : source;
+      const image = new Image();
+      image.src = src;
+      return image;
+    });
+  }

@@ -1,15 +1,20 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
   import star from "$lib/assets/doodles/star.svg";
   import Home from "$lib/pageCards/Home.svelte";
   import About from "$lib/pageCards/About.svelte";
   import Skills from "$lib/pageCards/Skills.svelte"
   import Projects from "$lib/pageCards/Projects.svelte"
   import Article from "$lib/pageCards/Article.svelte"
+  import Status from "$lib/pageCards/Status.svelte";
   import { articles } from "$lib/data/articles";
   import { createLink } from "$lib/helpers/pageFunctions";
 
   let activeSection = $state('home');
+  let showStatus = $state(false);
+  let observer;
+  const minWidth = 1024;
+  const minHeight = 570;
 
   function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -17,6 +22,20 @@
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  $effect(() => {
+    if (!showStatus) {
+      let cancelled = false;
+      const run = async () => {
+        await tick();
+        if (!cancelled) setupObserver();
+      };
+      run();
+      return () => { cancelled = true; };
+    } else {
+      observer?.disconnect();
+    }
+  });
   
   const projectSections = articles.map((article) => ({
     id: createLink(article.title),
@@ -57,13 +76,21 @@
     return isDark ? "highlightDark" : "highlight";
   }
 
-  onMount(() => {
+  function updateSize() {
+    showStatus = 
+      window.innerWidth <= minWidth ||
+      window.innerHeight <= minHeight;
+  }
+
+  function setupObserver() {
+    observer?.disconnect();
     const sections = document.querySelectorAll('section[id]');
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             activeSection = entry.target.id;
+            console.log(window.innerHeight, window.innerWidth);
           }
         });
       },
@@ -71,12 +98,24 @@
         threshold: 0.7,
       }
     );
-
     sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+  }
+
+  onMount(() => {
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    if (!showStatus) tick().then(setupObserver);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateSize);
+    }
   });
 </script>
 
+{#if showStatus}
+<Status/>
+{:else}
 <nav class="w-full [&>button]:cursor-pointer **:hover:scale-105 **:transition-all **:ease-in-out items-center fixed z-50 text-2xl h-18 justify-between flex px-16 pt-6 pb-2 font-light {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   <button class="{getLinkHighlight("home")}" onclick={() => scrollToSection('home')}>Home</button>
   <button class="{getLinkHighlight("about")}" onclick={() => scrollToSection('about')}>About Me</button>
@@ -107,3 +146,4 @@
     </section>
   {/each}
 </div>
+{/if}
