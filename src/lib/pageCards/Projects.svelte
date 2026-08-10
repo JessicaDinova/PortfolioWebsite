@@ -6,17 +6,28 @@
   import slideArrow from "$lib/assets/arrows/slideArrow.svg";
   import { projects } from "$lib/data/projects";
   import { createLink } from "$lib/helpers/pageFunctions";
-  import { slide, fade,fly, crossfade, scale } from "svelte/transition";
+  import { fly } from "svelte/transition";
+  import { onMount } from "svelte";
+  import { preloadImages } from "$lib/helpers/pageFunctions";
 
   let { scrollToSection } = $props();
   let currentIndex = $state(0);
+  let transitionDirection = $state(-100);
   let itemsPerView = 4;
+    //reference to prevent garbage collection of images
+  let preloadedImages = [];
+
+  onMount(() =>{
+    preloadedImages = preloadImages(projects, 'img');
+  })
 
   function nextSlide() {
+    transitionDirection = 100;
     currentIndex = (currentIndex + 1) % projects.length;
   }
 
   function previousSlide() {
+    transitionDirection = -100;
     currentIndex = (currentIndex - 1 + projects.length) % projects.length;
   }
 
@@ -42,7 +53,7 @@
   </button>
   <div class="flex gap-17">
     {#each visibleProjects as project, i (project.name || i)}
-      <button onclick={() => scrollToSection(createLink(project.name))} in:fly={{duration: 500, y:-100}}>
+      <button onclick={() => scrollToSection(createLink(project.name))} in:fly={{duration: 500, x: transitionDirection}}>
         <div class="relative flex justify-center hover:scale-105 transitional">
           <Description description={project.description}/>
           <ProjectCard projectName={project.name} projectImg={project.img} />

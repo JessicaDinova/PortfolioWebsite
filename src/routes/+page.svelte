@@ -6,10 +6,14 @@
   import Skills from "$lib/pageCards/Skills.svelte"
   import Projects from "$lib/pageCards/Projects.svelte"
   import Article from "$lib/pageCards/Article.svelte"
+  import Status from "$lib/pageCards/Status.svelte";
   import { articles } from "$lib/data/articles";
   import { createLink } from "$lib/helpers/pageFunctions";
 
   let activeSection = $state('home');
+  const minWidth = 1024;
+  const minHeight = 570;
+  let showStatus = $state(false);
 
   function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -57,13 +61,23 @@
     return isDark ? "highlightDark" : "highlight";
   }
 
+  function updateSize() {
+    showStatus = 
+      window.innerWidth <= minWidth ||
+      window.innerHeight <= minHeight;
+  }
+
   onMount(() => {
+    updateSize();
+    window.addEventListener('resize', updateSize);
+
     const sections = document.querySelectorAll('section[id]');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             activeSection = entry.target.id;
+            console.log(window.innerHeight, window.innerWidth);
           }
         });
       },
@@ -73,10 +87,16 @@
     );
 
     sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      window.removeEventListener('resize', updateSize);
+    }
   });
 </script>
 
+{#if showStatus}
+<Status/>
+{:else}
 <nav class="w-full [&>button]:cursor-pointer **:hover:scale-105 **:transition-all **:ease-in-out items-center fixed z-50 text-2xl h-18 justify-between flex px-16 pt-6 pb-2 font-light {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   <button class="{getLinkHighlight("home")}" onclick={() => scrollToSection('home')}>Home</button>
   <button class="{getLinkHighlight("about")}" onclick={() => scrollToSection('about')}>About Me</button>
@@ -107,3 +127,4 @@
     </section>
   {/each}
 </div>
+{/if}

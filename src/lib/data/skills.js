@@ -34,5 +34,6 @@ export const skills = [
     { name: "sass", icon: icons.sass },
     { name: "photoShop", icon: icons.photoShop },
     { name: "canva", icon: icons.canva },
-    { name: "claude", icon: icons.claude }
+    { name: "claude", icon: icons.claude },
+    { name: "d3js", icon: icons.d3js}
 ];

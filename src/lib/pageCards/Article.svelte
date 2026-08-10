@@ -1,5 +1,7 @@
 <script>
-  import githubImg from "$lib/assets/doodles/skills/github.svg";
+  import githubLight from "$lib/assets/doodles/skills/github.svg";
+  import githubDark from "$lib/assets/doodles/skills/githubDark.svg";
+  import ImageCarousel from "$lib/components/ImageCarousel.svelte";
   import Sticker from "$lib/components/Sticker.svelte";
   import { highlightText } from "$lib/helpers/pageFunctions";
 
@@ -10,6 +12,7 @@
   const darkModeText = $derived(article.darkStyle ? "text-cream-100" : "");
   const textHighlight = $derived(article.darkStyle? "highlightDark" : "highlight");
   const textSegments = $derived(highlightText(article.text));
+  const githubTheme = $derived(article.darkStyle ? githubDark : githubLight);
 </script>
 
 <div class="main gap-32 overflow-hidden justify-center px-10 items-center flex {flexDirection} {darkModeText}">
@@ -21,7 +24,7 @@
       <h1 class="text-4xl uppercase font-hand font-medium text-lavander-100 text-shadow-boldest">{article.title}</h1>
       {#if article.link}
         <a href={article.link} target="_blank">
-          <img class="h-10 hover:scale-105 transitional" src={githubImg} alt="github" />
+          <img class="h-10 hover:scale-105 transitional" src={githubTheme} alt="github" />
         </a>
       {/if}
     </div>
@@ -42,10 +45,7 @@
       {/each}
     </div>
   </div>
-  <div class="relative flex justify-center items-center">
-    {#each article.imgConfig.stickers as sticker}
-      <Sticker sticker={sticker} isDoodle={false}/>
-    {/each}
-    <img class="{article.imgConfig.size} shadow-xl object-cover"  src={article.imgConfig.img} alt={article.title} />
+  <div class="flex justify-center items-center">
+    <ImageCarousel imgConfig={article.imgConfig}/>
   </div>
 </div>

@@ -1,6 +1,16 @@
-import looneyFullImg from "$lib/assets/projectImages/looneyFull.png";
-import pageBuilderFullImg from "$lib/assets/projectImages/pageBuilderFull.png";
-import manageMeFullImg from "$lib/assets/projectImages/manageMeFull.png";
+import looney1 from "$lib/assets/projectImages/articleImages/looney1.png";
+import looney2 from "$lib/assets/projectImages/articleImages/looney2.png";
+import looney3 from "$lib/assets/projectImages/articleImages/looney3.png";
+import pageBuilder from "$lib/assets/projectImages/articleImages/pageBuilder.png";
+import manageMe1 from "$lib/assets/projectImages/articleImages/manageMe1.png";
+import manageMe2 from "$lib/assets/projectImages/articleImages/manageMe2.png";
+import manageMe3 from "$lib/assets/projectImages/articleImages/manageMe3.png";
+import curiousVillage1 from "$lib/assets/projectImages/articleImages/curiousVillage1.png";
+import curiousVillage2 from "$lib/assets/projectImages/articleImages/curiousVillage2.png";
+import curiousVillage3 from "$lib/assets/projectImages/articleImages/curiousVillage3.png";
+import sunLay1 from "$lib/assets/projectImages/articleImages/sunLay1.png";
+import sunLay2 from "$lib/assets/projectImages/articleImages/sunLay2.png";
+import sunLay3 from "$lib/assets/projectImages/articleImages/sunLay3.png";
 import dragon from "$lib/assets/doodles/dragonDoodle.svg";
 import robot from "$lib/assets/doodles/robotDoodle.svg";
 import cup from "$lib/assets/doodles/cupDoodle.svg";
@@ -9,13 +19,14 @@ import drag from "$lib/assets/doodles/dragDoodle.svg";
 import puzzle from "$lib/assets/doodles/puzzleDoodle.svg";
 import book from "$lib/assets/doodles/bookDoodle.svg";
 import chart from "$lib/assets/doodles/chartDoodle.svg";
+import energy from "$lib/assets/doodles/energyDoodle.svg";
+import sun from "$lib/assets/doodles/sunDoodle.svg";
 import stickerBottom from "$lib/assets/stickers/stickerBottom.svg";
 import stickerLeft1 from "$lib/assets/stickers/stickerLeft1.svg";
 import stickerLeft2 from "$lib/assets/stickers/stickerLeft2.svg";
 import stickerRight1 from "$lib/assets/stickers/stickerRight1.svg";
 import stickerRight2 from "$lib/assets/stickers/stickerRight2.svg";
 import stickerTop from "$lib/assets/stickers/stickerTop.svg";
-import curiousVillageImg from "$lib/assets/projectImages/curiousVillage.png";
 import linkedIn from "$lib/assets/doodles/LinkedIn.svg";
 import gitHub from "$lib/assets/doodles/skills/github.svg";
 
@@ -32,8 +43,8 @@ export const articles = [
     darkStyle: true,
     imgConfig: {
       imgLeft: true,
-      img: pageBuilderFullImg,
-      size: "h-100",
+      images: [pageBuilder],
+      size: "h-100",  
       stickers: [
         { img: stickerRight1, styling: "", position:"-right-10 -top-10" },
         { img: stickerRight2, styling: "", position:"-left-10 -bottom-10" },
@@ -57,8 +68,8 @@ export const articles = [
     darkStyle: false,
     imgConfig: {
       imgLeft: false,
-      img: looneyFullImg,
-      size: "h-140",
+      images: [looney1, looney2, looney3],
+      size: "h-120",
       stickers: [
         { img: stickerBottom, styling:"", position: "-top-8" },
         { img: stickerTop, styling:"", position: "-bottom-20" }
@@ -66,7 +77,7 @@ export const articles = [
     },
     doodles: [
       { img: robot, styling: "w-29", position:"-left-152 -top-12" },
-      { img: dragon, styling: "w-47", position:"-bottom-32 -right-52" },
+      { img: dragon, styling: "w-47", position:"-bottom-25 -right-55" },
     ],
     tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "JavaScript"]
   },
@@ -83,7 +94,7 @@ export const articles = [
     darkStyle: false,
     imgConfig: {
       imgLeft: true,
-      img: curiousVillageImg,
+      images: [curiousVillage1, curiousVillage2, curiousVillage3],
       size: "h-90",
       stickers: [
         { img: stickerLeft1, styling:"", position: "-left-11 -top-11" },
@@ -106,15 +117,39 @@ export const articles = [
     darkStyle: true,
     imgConfig: {
       imgLeft: false,
-      img: manageMeFullImg,
-      size: "h-100",
+      images: [manageMe1, manageMe2, manageMe3],
+      size: "w-170",
       stickers: [{ img: stickerTop, styling: "", position:"-top-8" }],
     },
     doodles: [
-      { img: chart, styling: "w-29", position:"-top-16 left-56" },
-      { img: book, styling: "w-32 -rotate-30", position:"-bottom-20 -left-36" },
+      { img: chart, styling: "w-29", position:"-top-20 left-15" },
+      { img: book, styling: "w-32", position:"-bottom-18 -left-200" },
     ],
     tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
+  },
+  {
+    title: "SunLay",
+    text: `For a **school project** with Delta Power, we created a **3D solar panel optimizer**. Pick your city, 
+            drag in your energy profile, and the app figures out the perfect placement, angle, and quantity 
+            to **maximize production**. If you've already searched a nearby city, it's smart enough to **reuse that solar data**. 
+            The results? A 3D visualization of the building with optimally positioned panels, 
+            detailed energy metrics, and a downloadable **PDF report** showing everything from production to grid impact.`,
+    link: `https://github.com/ComplexProject/3D-solar-panel-visualization`,
+    darkStyle: true,
+    imgConfig: {
+      imgLeft: true,
+      images: [sunLay1, sunLay2, sunLay3],
+      size: "w-170",
+      stickers: [
+        { img: stickerLeft1, styling: "", position:"-right-10 -bottom-10" },
+        { img: stickerLeft2, styling: "", position:"-left-10 -top-10" },
+      ],
+    },
+    doodles: [
+      { img: sun, styling: "w-29", position:"-top-22 -right-185" },
+      { img: energy, styling: "w-14", position:"-bottom-5 -right-30" },
+    ],
+    tech: ["React", "TypeScript", "Python", "Blender", "Three.js"]
   }
 ]
 
@@ -126,7 +161,7 @@ export const aboutMeArticle = {
           (and I chase it in every project I create). Outside of code, you can find me 
           **working out my brain** with Japanese nonograms, crosswords, sudoku, or any other logical puzzle.`,
   links: [
-    {img: gitHub, href: "https://github.com/JessicaDinova"},
-    {img: linkedIn, href: "https://www.linkedin.com/in/jessica-diňová-0b182a27a"}
+    { img: gitHub, href: "https://github.com/JessicaDinova"},
+    { img: linkedIn, href: "https://www.linkedin.com/in/jessica-diňová-0b182a27a"}
   ]
 }
