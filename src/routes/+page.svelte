@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
   import star from "$lib/assets/doodles/star.svg";
   import Home from "$lib/pageCards/Home.svelte";
   import About from "$lib/pageCards/About.svelte";
@@ -11,9 +11,10 @@
   import { createLink } from "$lib/helpers/pageFunctions";
 
   let activeSection = $state('home');
+  let showStatus = $state(false);
+  let observer;
   const minWidth = 1024;
   const minHeight = 570;
-  let showStatus = $state(false);
 
   function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
@@ -21,6 +22,20 @@
       section.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
+  $effect(() => {
+    if (!showStatus) {
+      let cancelled = false;
+      const run = async () => {
+        await tick();
+        if (!cancelled) setupObserver();
+      };
+      run();
+      return () => { cancelled = true; };
+    } else {
+      observer?.disconnect();
+    }
+  });
   
   const projectSections = articles.map((article) => ({
     id: createLink(article.title),
@@ -67,12 +82,10 @@
       window.innerHeight <= minHeight;
   }
 
-  onMount(() => {
-    updateSize();
-    window.addEventListener('resize', updateSize);
-
+  function setupObserver() {
+    observer?.disconnect();
     const sections = document.querySelectorAll('section[id]');
-    const observer = new IntersectionObserver(
+    observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -85,8 +98,14 @@
         threshold: 0.7,
       }
     );
-
     sections.forEach((section) => observer.observe(section));
+  }
+
+  onMount(() => {
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    if (!showStatus) tick().then(setupObserver);
+
     return () => {
       observer.disconnect();
       window.removeEventListener('resize', updateSize);
