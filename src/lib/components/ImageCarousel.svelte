@@ -37,7 +37,7 @@
   {#if numberOfImgs > 1}
     <div class="flex z-10 gap-2 items-center">
       <button onclick={previousSlide} class="cursor-pointer hover:scale-105">
-        <img src="{slideArrow}" alt="arrow" class="rotate-180 w-6">
+        <img src={slideArrow} alt="arrow" class="rotate-180 w-6">
       </button>
       {#each Array(numberOfImgs) as _, i}
         <button onclick={() => (currentImg = i)}>
@@ -45,7 +45,7 @@
         </button>
       {/each}
       <button onclick={nextSlide} class="cursor-pointer hover:scale-105">
-        <img src="{slideArrow}" alt="arrow" class="w-6">
+        <img src={slideArrow} alt="arrow" class="w-6">
       </button>
     </div>
   {/if}

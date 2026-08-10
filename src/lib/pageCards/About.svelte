@@ -6,7 +6,7 @@
 </script>
 
 <div class="main font-light flex flex-row justify-center gap-[10%] items-center">
-  <img class="w-112.5 drop-shadow-xl" src="{profilePic}" alt="profilePic">
+  <img class="w-112.5 drop-shadow-xl" src={profilePic} alt="profilePic">
   <div class="text-2xl text-justify w-[45%] max-w-3xl flex flex-col gap-5">
     <article>
       {#each textSegments as segment}
@@ -20,7 +20,7 @@
     <div class="flex flex-row-reverse gap-3">
       {#each aboutMeArticle.links as link}
         <a href="{link.href}" target="_blank">
-          <img src="{link.img}" class="h-15 hover:scale-105 transitional" alt="doodle">
+          <img src={link.img} class="h-15 hover:scale-105 transitional" alt="doodle">
         </a>
       {/each}
     </div>

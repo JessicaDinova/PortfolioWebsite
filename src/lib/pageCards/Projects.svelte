@@ -49,7 +49,7 @@
     alt="doodle"
   />
   <button onclick={previousSlide} class="cursor-pointer hover:scale-105">
-    <img src="{slideArrow}" alt="arrow" class="rotate-180 w-6">
+    <img src={slideArrow} alt="arrow" class="rotate-180 w-6">
   </button>
   <div class="flex gap-17">
     {#each visibleProjects as project, i (project.name || i)}
@@ -65,6 +65,6 @@
     {/each}
   </div>
   <button onclick={nextSlide} class="cursor-pointer hover:scale-105">
-    <img src="{slideArrow}" alt="arrow" class="w-6">
+    <img src={slideArrow} alt="arrow" class="w-6">
   </button>
 </div>
