@@ -27,7 +27,7 @@ import stickerLeft2 from "$lib/assets/stickers/stickerLeft2.svg";
 import stickerRight1 from "$lib/assets/stickers/stickerRight1.svg";
 import stickerRight2 from "$lib/assets/stickers/stickerRight2.svg";
 import stickerTop from "$lib/assets/stickers/stickerTop.svg";
-import linkedIn from "$lib/assets/doodles/LinkedIn.svg";
+import linkedIn from "$lib/assets/doodles/linkedIn.svg";
 import gitHub from "$lib/assets/doodles/skills/github.svg";
 
 export const articles = [
