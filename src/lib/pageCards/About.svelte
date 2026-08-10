@@ -1,6 +1,6 @@
 <script>
   import profilePic from "$lib/assets/myself/profilePic.png"
-  import { aboutMeArticle } from "$lib/data/articles";
+  import { aboutMeArticle } from "$lib/data/articles.svelte";
   import { highlightText } from "$lib/helpers/pageFunctions";
   const textSegments = $derived(highlightText(aboutMeArticle.text));
 </script>

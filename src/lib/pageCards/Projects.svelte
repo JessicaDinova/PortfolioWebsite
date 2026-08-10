@@ -4,7 +4,7 @@
   import Description from "$lib/components/Description.svelte";
   import queenDoodle from "$lib/assets/doodles/queen.png";
   import slideArrow from "$lib/assets/arrows/slideArrow.svg";
-  import { projects } from "$lib/data/projects";
+  import { projects } from "$lib/data/projects.svelte";
   import { createLink } from "$lib/helpers/pageFunctions";
   import { fly } from "svelte/transition";
   import { onMount } from "svelte";

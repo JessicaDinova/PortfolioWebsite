@@ -1,5 +1,5 @@
 <script>
-  import { skills } from "$lib/data/skills";
+  import { skills } from "$lib/data/skills.svelte";
   import stamp from "$lib/assets/doodles/stamp.svg";
   import Marquee from "$lib/components/Marquee.svelte";
   let halfLenght = Math.ceil(skills.length / 2);
