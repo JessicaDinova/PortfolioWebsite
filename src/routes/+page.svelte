@@ -32,9 +32,8 @@
       };
       run();
       return () => { cancelled = true; };
-    } else {
-      observer?.disconnect();
     }
+    observer?.disconnect();
   });
   
   const projectSections = articles.map((article) => ({
@@ -113,10 +112,7 @@
   });
 </script>
 
-{#if showStatus}
-<Status/>
-{:else}
-<nav class="w-full [&>button]:cursor-pointer **:hover:scale-105 **:transition-all **:ease-in-out items-center fixed z-50 text-2xl h-18 justify-between flex px-16 pt-6 pb-2 font-light {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
+<nav class="w-full {showStatus ? "hidden" : ""} [&>button]:cursor-pointer **:hover:scale-105 **:transition-all **:ease-in-out items-center fixed z-50 text-2xl h-18 justify-between flex px-16 pt-6 pb-2 font-light {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   <button class="{getLinkHighlight("home")}" onclick={() => scrollToSection('home')}>Home</button>
   <button class="{getLinkHighlight("about")}" onclick={() => scrollToSection('about')}>About Me</button>
   <button class="{getLinkHighlight("skills")}" onclick={() => scrollToSection('skills')}>Skills</button>
@@ -127,7 +123,7 @@
   </a>
 </nav>
 
-<div class="[&>.dark]:bg-coal-100 scrollbar-thin *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
+<div class="{showStatus ? "hidden" : ""} [&>.dark]:bg-coal-100 scrollbar-thin *:snap-start flex flex-col w-screen h-screen snap-y snap-proximity overflow-y-scroll scroll-smooth">
   <section id="home">
     <Home />
   </section>
@@ -146,4 +142,9 @@
     </section>
   {/each}
 </div>
+
+{#if showStatus}
+  <div class="h-screen w-full">
+    <Status />
+  </div>
 {/if}
