@@ -27,8 +27,8 @@ const config = {
     },
 
     paths: {
-      base: process.argv.includes("dev") ? "" : "/PortfolioWebsite",
-    },
+      base: process.env.NODE_ENV === "development" ? "" : (process.env.BASE_PATH ?? ""),
+    }
   },
 };
 
