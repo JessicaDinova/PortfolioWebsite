@@ -89,7 +89,6 @@
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             activeSection = entry.target.id;
-            console.log(window.innerHeight, window.innerWidth);
           }
         });
       },
