@@ -121,7 +121,7 @@
   <button class="{getLinkHighlight("about")}" onclick={() => scrollToSection('about')}>About Me</button>
   <button class="{getLinkHighlight("skills")}" onclick={() => scrollToSection('skills')}>Skills</button>
   <button class="{getLinkHighlight("projects")}" onclick={() => scrollToSection('projects')}>Projects</button>
-  <a class="flex flex-row items-center" target="_blank" href="/cv/cv.pdf">
+  <a class="flex flex-row items-center" target="_blank" href="cv/cv.pdf">
     <img class="h-4" src={star} alt="star"/>CV
     <img class="h-4" src={star} alt="star"/>
   </a>
