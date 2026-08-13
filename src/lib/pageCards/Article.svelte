@@ -21,7 +21,7 @@
     {#each article.doodles as doodle}
       <Sticker sticker={doodle}/>
     {/each}
-    <div class="flex flex-row gap-2 justify-center {justifyDirection}">
+    <div class="flex flex-row gap-2 justify-center items-center {justifyDirection}">
       <h1 class="text-[2.2rem] uppercase font-hand font-medium text-lavander-100 text-shadow-boldest">{article.title}</h1>
       {#if article.link}
         <a href={article.link} target="_blank">

@@ -159,7 +159,7 @@ export const aboutMeArticle = {
           I am now on a hunt for a **junior** dev role. What I enjoy is creating and designing 
           **websites** and **web apps** while making sure they feel **nice to use** 
           (and I chase it in every project I create). Outside of code, you can find me 
-          **working out my brain** with Japanese nonograms, crosswords, sudoku, or any other logical puzzle.`,
+          **working out my brain** with Japanese nonogram, crosswords, sudoku, or any other logical puzzle.`,
   links: [
     { img: gitHub, href: "https://github.com/JessicaDinova"},
     { img: linkedIn, href: "https://www.linkedin.com/in/jessica-diňová-0b182a27a"}
