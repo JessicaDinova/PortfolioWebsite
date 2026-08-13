@@ -51,3 +51,14 @@
       return image;
     });
   }
+
+  /**
+   * Scrolls to a page section based on id
+   * @param {*} sectionId id of the section
+   */
+  export function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  }

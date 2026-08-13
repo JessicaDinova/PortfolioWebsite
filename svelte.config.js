@@ -20,11 +20,8 @@ const config = {
     }),
 
     prerender: {
-      // only ignore the particular 404 that breaks your build; otherwise throw
       handleHttpError: ({ status, path, referrer, message }) => {
-        // ignore 404 for root when using a non-empty paths.base
         if (status === 404 && path === "/") return;
-        // otherwise fail the build (default)
         throw new Error(message);
       },
     },
