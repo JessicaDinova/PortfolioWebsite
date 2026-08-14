@@ -52,7 +52,7 @@ export const articles = [
     },
     doodles: [
       { img: drag, styling: "w-15 md:w-29", position:"-top-10 -right-5 md:-top-16 md:right-8 -rotate-30" },
-      { img: puzzle, styling: "w-30 md:w-50", position:"-bottom-5 right-10 md:-bottom-20 -md:right-200" },
+      { img: puzzle, styling: "w-30 md:w-50", position:"-bottom-5 right-10 md:-bottom-20 md:-right-200" },
     ],
     tech: ["Angular", "TypeScript", "JSON", "C#", "Anthropic API", "SCSS"]
   },
@@ -77,7 +77,7 @@ export const articles = [
     },
     doodles: [
       { img: robot, styling: "w-15 md:w-29", position:"-left-5 -top-5 md:-left-152 md:-top-12" },
-      { img: dragon, styling: "w-25 md:w-47", position:"-bottom-115 -right-6 md:-bottom-25 md:-right-55" },
+      { img: dragon, styling: "w-25 md:w-47", position:"-bottom-115 -right-6 md:-bottom-20 md:-right-55" },
     ],
     tech: ["SvelteKit", "Tailwind", "JavaScript", "Microservices", "Docker"]
   },

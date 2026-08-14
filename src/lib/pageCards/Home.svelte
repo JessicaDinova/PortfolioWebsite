@@ -5,7 +5,7 @@
     {img:star, styling:"h-5 md:h-10", position:"left-20 top-50 md:left-50 md:top-45"},
     {img:star, styling:"h-3 md:h-8 rotate-20", position:"left-35 top-110 md:left-150 md:top-120"},
     {img:star, styling:"h-10 md:h-15 rotate-15", position:"right-20 top-20 md:right-70 md:top-40"},
-    {img:star, styling:"h-5 md:h-10 -rotate-30", position:"right-35 top-75 md:top-75 md:right-150"},
+    {img:star, styling:"h-5 md:h-10 -rotate-30", position:"right-35 top-75 md:top-70 md:right-150"},
     {img:star, styling:"h-13 md:h-18 -rotate-10", position:"left-10 bottom-20"},
     {img:star, styling:"h-5 md:h-10 rotate-10", position:"left-25 bottom-37"},
     {img:star, styling:"h-10 md:h-15 rotate-10", position:"right-15 bottom-43"},

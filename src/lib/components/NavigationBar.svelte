@@ -88,9 +88,9 @@
   </a>
 {/snippet}
 
-<nav class="hidden md:flex w-full [&_button]:cursor-pointer fixed z-50 text-2xl h-18 items-center justify-between px-32 pt-6 pb-2 font-light transition-colors duration-300 **:hover:scale-105 **:transition-all **:ease-in-out {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
+<nav class="hidden md:flex w-full fixed z-50 text-2xl h-18 items-center justify-between px-32 pt-6 pb-2 font-light transition-colors duration-300  {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   {#each navLinks as link}
-    <button class="{getLinkHighlight(link.id)}" onclick={() => handleNavClick(link.id)}>
+    <button class="{getLinkHighlight(link.id)} cursor-pointer hover:scale-105 transitional ease-in-out" onclick={() => handleNavClick(link.id)}>
       {link.label}
     </button>
   {/each}
@@ -99,7 +99,7 @@
 
 <div class="md:hidden">
   <button 
-    class="rounded-l-xl shadow-lg right-0 fixed top-6 z-50 transition-all duration-300 bg-lavander-100 p-2 flex justify-center" 
+    class="{isOpen ? 'rounded-xl right-3' : "rounded-l-xl right-0"} hover:scale-105 transitional cursor-pointer shadow-lg fixed top-6 z-50 transition-all duration-300 bg-lavander-100 p-2 flex justify-center" 
     onclick={() => isOpen = !isOpen} 
     aria-label="toggle nav menu">
     <img class="size-10" src="{isOpen ? close : open}" alt="toggle"/>
@@ -109,7 +109,7 @@
     <div class="fixed inset-0 h-full w-screen z-40 flex flex-col gap-8 px-20 items-center justify-center shadow-xl bg-cream-100 font-light text-2xl" 
       transition:fade={{duration: 200}}>
       {#each navLinks as link}
-        <button class="{getLinkHighlight(link.id, true)} text-center w-full" onclick={() => handleNavClick(link.id, true)}>
+        <button class="{getLinkHighlight(link.id, true)} w-full text-center cursor-pointer hover:scale-105 transitional ease-in-out" onclick={() => handleNavClick(link.id, true)}>
           {link.label}
         </button>
       {/each}

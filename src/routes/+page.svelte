@@ -42,7 +42,7 @@
 
 <NavigationBar activeSection={activeSection}/>
 
-<div class="[&>.dark]:bg-coal-100 scrollbar-thin *:md:snap-start flex flex-col w-screen h-screen md:snap-y md:snap-proximity md:overflow-y-scroll scroll-smooth">
+<div class="[&>.dark]:bg-coal-100 scrollbar-thin *:md:snap-start flex flex-col md:w-screen h-screen md:snap-y md:snap-proximity md:overflow-y-scroll scroll-smooth">
   <section id="home">
     <Home />
   </section>
