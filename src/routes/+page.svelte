@@ -6,6 +6,7 @@
   import Skills from "$lib/pageCards/Skills.svelte"
   import Projects from "$lib/pageCards/Projects.svelte"
   import Article from "$lib/pageCards/Article.svelte"
+  import Footer from "$lib/pageCards/Footer.svelte";
   import { articles } from "$lib/data/articles.svelte";
   import { createLink } from "$lib/helpers/pageFunctions";
   import { scrollToSection } from "$lib/helpers/pageFunctions";
@@ -60,4 +61,8 @@
       <Article article={article}/>
     </section>
   {/each}
+  <section id="footer">
+    <Footer/>
+  </section>
 </div>
+

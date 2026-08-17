@@ -88,7 +88,7 @@
   </a>
 {/snippet}
 
-<nav class="hidden md:flex w-full fixed z-50 text-2xl h-18 items-center justify-between px-32 pt-6 pb-2 font-light transition-colors duration-300  {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
+<nav class="hidden {activeSection === "footer" ? "hidden" : "md:flex"} w-full fixed z-50 text-2xl h-18 items-center justify-between px-32 pt-6 pb-2 font-light transitional duration-300  {isDarkSection(activeSection) ? "bg-coal-100 text-white" : "bg-cream-100 text-black"}">
   {#each navLinks as link}
     <button class="{getLinkHighlight(link.id)} cursor-pointer hover:scale-105 transitional ease-in-out" onclick={() => handleNavClick(link.id)}>
       {link.label}
