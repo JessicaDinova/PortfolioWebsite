@@ -7,7 +7,7 @@
   let marqueeTwo = $derived(skills.slice(halfLenght, skills.length));
 </script>
 
-<div class="main relative font-light flex flex-col justify-center gap-20 items-center overflow-x-hidden">
+<div class="pageShell relative font-light flex flex-col gap-20 axesCenter overflow-x-hidden">
   <img
     class="w-35 md:w-48 drop-shadow-lg -rotate-30 hover:rotate-0 transitional hover:z-30 lg:drop-shadow-2xl lg:hover:opacity-100 lg:opacity-40 absolute top-8 left-3 md:top-20 md:left-10"
     src={stamp}

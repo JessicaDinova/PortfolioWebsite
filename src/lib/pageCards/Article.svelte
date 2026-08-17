@@ -16,7 +16,7 @@
   const shouldSpan = (text) => text.length > 10;
 </script>
 
-<div class="main gap-10 md:gap-32 overflow-hidden justify-center py-15 px-8 items-center flex flex-col {flexDirection} {darkModeText}">
+<div class="pageShell gap-10 md:gap-32 overflow-hidden axesCenter py-15 px-8 flex flex-col {flexDirection} {darkModeText}">
   <div class="relative w-full md:w-[40%] md:max-w-3xl flex flex-col gap-7">  
     {#each article.doodles as doodle}
       <Sticker sticker={doodle}/>
@@ -41,13 +41,13 @@
     <div class="w-full py-2 grid grid-cols-3 gap-2 md:flex md:flex-nowrap md:justify-between md:gap-0">
       {#each article.tech as tech}
         {@const span = shouldSpan(tech) ? 'col-span-2' : 'col-span-1'}
-          <div class="border-2 border-lavander-100 bg-lavander-50 p-3 rounded-4xl hover:scale-105 transition ease-in-out cursor-default md:flex-none {span}">
+          <div class="border-2 border-lavander-100 bg-lavander-50 p-3 rounded-4xl hover:scale-105 transitional cursor-default md:flex-none {span}">
           <p class="text-center text-sm md:text-base md:whitespace-nowrap wrap-break-word">{tech}</p>
         </div>
       {/each}
     </div>
   </div>
-  <div class="flex justify-center items-center">
+  <div class="flex axesCenter">
     <ImageCarousel imgConfig={article.imgConfig}/>
   </div>
 </div>

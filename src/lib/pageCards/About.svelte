@@ -5,7 +5,7 @@
   const textSegments = $derived(highlightText(aboutMeArticle.text));
 </script>
 
-<div class="main font-light flex flex-col md:flex-row justify-center gap-10 md:gap-30 items-center">
+<div class="pageShell font-light flex flex-col md:flex-row axesCenter gap-10 md:gap-30">
   <img class="w-80 md:w-112.5 drop-shadow-xl" src={profilePic} alt="profilePic">
   <div class="text-xl md:text-2xl text-justify w-[80%] md:w-[45%] max-w-3xl flex flex-col gap-5">
     <article>

@@ -14,7 +14,6 @@
   let currentIndex = $state(0);
   let transitionDirection = $state(-100);
   let itemsPerView = 4;
-    //reference to prevent garbage collection of images
   let preloadedImages = [];
 
   onMount(() =>{
@@ -42,7 +41,7 @@
   let visibleProjects = $derived(getCircularSlice(projects, currentIndex, itemsPerView));
 </script>
 
-<div class="main relative overflow-hidden justify-center items-center flex flex-row gap-8">
+<div class="pageShell relative overflow-hidden axesCenter flex flex-row gap-8">
   <img
     class="w-[13%] absolute bottom-0 left-0"
     src={queenDoodle}

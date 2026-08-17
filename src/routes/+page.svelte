@@ -27,7 +27,7 @@
         });
       },
       {
-        threshold: isMobile ? 0.1 : 0.7,
+        threshold: isMobile ? 0.4 : 0.7,
       }
     );
     sections.forEach((section) => observer.observe(section));

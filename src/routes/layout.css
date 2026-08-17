@@ -55,10 +55,14 @@ body {
   padding: 0rem 0.8rem 0.2rem;
 }
 
-.main {
+.pageShell {
   @apply w-full min-h-screen py-20 md:pt-18 md:py-0
 }
 
 .transitional {
   @apply transition-all ease-in-out
+}
+
+.axesCenter {
+  @apply justify-center items-center
 }

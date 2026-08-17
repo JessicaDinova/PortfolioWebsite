@@ -13,7 +13,7 @@
     {img:star, styling:"h-5 md:h-10 -rotate-20", position:"right-10 bottom-26"},
   ]
 </script>
-<div class="main relative font-light flex flex-col justify-center items-center">
+<div class="pageShell relative font-light flex flex-col axesCenter">
   <h1 class="text-4xl md:text-6xl">Hello, I am 
   <span class="font-drawn text-4xl md:text-middle text-lavander-100 font-black text-shadow-boldest">
     Jessica
