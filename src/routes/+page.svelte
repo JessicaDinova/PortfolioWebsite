@@ -16,7 +16,7 @@
 
   function setupObserver() {
     observer?.disconnect();
-    const isMobile = window.innerWidth < 800;
+    const isMobile = window.innerWidth < 768;
     const sections = document.querySelectorAll('section[id]');
     observer = new IntersectionObserver(
       (entries) => {
@@ -43,7 +43,7 @@
 
 <NavigationBar activeSection={activeSection}/>
 
-<div class="[&>.dark]:bg-coal-100 scrollbar-thin *:md:snap-start flex flex-col md:w-screen h-screen md:snap-y md:snap-proximity md:overflow-y-scroll scroll-smooth">
+<div class="[&>.dark]:bg-coal-100 scrollbar-thin *:lg:snap-start flex flex-col md:w-screen h-screen lg:snap-y lg:snap-proximity lg:overflow-y-scroll scroll-smooth">
   <section id="home">
     <Home />
   </section>

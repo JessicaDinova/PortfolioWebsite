@@ -7,8 +7,8 @@
 
   let { article } = $props();
 
-  const flexDirection = $derived(article.imgConfig.imgLeft ? "md:flex-row" : "md:flex-row-reverse");
-  const justifyDirection = $derived(article.imgConfig.imgLeft ? "md:justify-start" : "md:justify-end");
+  const flexDirection = $derived(article.imgConfig.imgLeft ? "lg:flex-row" : "lg:flex-row-reverse");
+  const justifyDirection = $derived(article.imgConfig.imgLeft ? "lg:justify-start" : "lg:justify-end");
   const darkModeText = $derived(article.darkStyle ? "text-cream-100" : "");
   const textHighlight = $derived(article.darkStyle? "highlightDark" : "highlight");
   const textSegments = $derived(highlightText(article.text));
@@ -16,8 +16,8 @@
   const shouldSpan = (text) => text.length > 10;
 </script>
 
-<div class="pageShell gap-10 md:gap-32 overflow-hidden axesCenter py-15 px-8 flex flex-col {flexDirection} {darkModeText}">
-  <div class="relative w-full md:w-[40%] md:max-w-3xl flex flex-col gap-7">  
+<div class="pageShell gap-10 lg:gap-32 overflow-hidden axesCenter py-15 px-8 lg:px-10 flex flex-col {flexDirection} {darkModeText}">
+  <div class="relative w-full md:w-[90%] lg:w-[40%] lg:max-w-3xl flex flex-col gap-7">  
     {#each article.doodles as doodle}
       <Sticker sticker={doodle}/>
     {/each}

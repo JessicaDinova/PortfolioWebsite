@@ -44,7 +44,7 @@ export const articles = [
     imgConfig: {
       imgLeft: true,
       images: [pageBuilder],
-      size: "w-85 md:w-170",  
+      size: "w-85 md:w-165",  
       stickers: [
         { img: stickerRight1, styling: "", position:"-right-5 -top-7 md:-right-10 md:-top-10" },
         { img: stickerRight2, styling: "", position:"-left-7 -bottom-7 md:-left-10 md:-bottom-10" },
@@ -52,7 +52,7 @@ export const articles = [
     },
     doodles: [
       { img: drag, styling: "w-15 md:w-29", position:"-top-10 -right-5 md:-top-16 md:right-8 -rotate-30" },
-      { img: puzzle, styling: "w-30 md:w-50", position:"-bottom-5 right-10 md:-bottom-20 md:-right-200" },
+      { img: puzzle, styling: "w-30 md:w-50", position:"-bottom-5 right-10 md:-bottom-135 lg:-bottom-20 lg:-right-200" },
     ],
     tech: ["Angular", "TypeScript", "JSON", "C#", "Anthropic API", "SCSS"]
   },
@@ -76,8 +76,8 @@ export const articles = [
       ],
     },
     doodles: [
-      { img: robot, styling: "w-15 md:w-29", position:"-left-5 -top-5 md:-left-152 md:-top-12" },
-      { img: dragon, styling: "w-25 md:w-47", position:"-bottom-115 -right-6 md:-bottom-20 md:-right-55" },
+      { img: robot, styling: "w-15 md:w-29", position:"-left-5 -top-5 lg:-left-152 md:-top-12" },
+      { img: dragon, styling: "w-25 md:w-47", position:"-bottom-115 -right-6 lg:-bottom-20 lg:-right-55" },
     ],
     tech: ["SvelteKit", "Tailwind", "JavaScript", "Microservices", "Docker"]
   },
@@ -102,8 +102,8 @@ export const articles = [
       ],
     },
     doodles: [
-      { img: cup, styling: "w-20 md:w-29", position:"-bottom-95 right-0 md:-top-20 md:-right-32"},
-      { img: controller, styling: "w-25 md:w-36", position:"-bottom-5 right-5 md:-bottom-12 md:right-36" },
+      { img: cup, styling: "w-20 md:w-29", position:"-bottom-95 right-0 md:-top-20 lg:-right-32"},
+      { img: controller, styling: "w-25 lg:w-36", position:"-bottom-5 right-5 lg:-bottom-12 md:right-36" },
     ],
     tech: ["TypeScript"]
   },
@@ -122,8 +122,8 @@ export const articles = [
       stickers: [{ img: stickerTop, styling: "", position:"-top-5 md:-top-8" }],
     },
     doodles: [
-      { img: chart, styling: "w-15 md:w-29", position:"-top-10 md:-top-20 md:left-15" },
-      { img: book, styling: "w-18 md:w-32", position:"-bottom-5 right-5 md:-bottom-18 md:-left-200" },
+      { img: chart, styling: "w-15 md:w-29", position:"-top-10 lg:-top-20 md:left-15" },
+      { img: book, styling: "w-18 md:w-32", position:"-bottom-5 right-5 md:-bottom-145 lg:-bottom-18 lg:-left-200" },
     ],
     tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
   },
@@ -146,8 +146,8 @@ export const articles = [
       ],
     },
     doodles: [
-      { img: sun, styling: "w-20 md:w-29", position:"-top-15 right-5md:-top-22 md:-right-185" },
-      { img: energy, styling: "w-7 md:w-14", position:"-bottom-80 right-5 md:-bottom-5 md:-right-30" },
+      { img: sun, styling: "w-20 md:w-29", position:"-top-15 right-5 md:-top-22 lg:-right-185" },
+      { img: energy, styling: "w-7 md:w-14", position:"-bottom-80 right-5 md:-bottom-140 lg:-bottom-5 lg:-right-30" },
     ],
     tech: ["React", "TypeScript", "Python", "Blender", "Three.js"]
   }
