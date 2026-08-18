@@ -11,9 +11,21 @@
   let numberOfImgs = $derived(imgConfig.images.length);
   let currentImg = $state(0);
   let preloadedImgs = [];
+  let startX = 0;
 
   const nextSlide = () => (currentImg === (numberOfImgs - 1) ? currentImg = 0 : currentImg++);
   const previousSlide = () => (currentImg === 0 ? currentImg = (numberOfImgs - 1) : currentImg--);
+
+  function handleTouchStart(event) {
+    startX = event.touches[0].clientX;
+  }
+  
+  function handleTouchEnd (event) {
+    const swipe = event.changedTouches[0].clientX - startX;
+    if (Math.abs(swipe) > 50) {
+      swipe < 0 ? nextSlide() : previousSlide();
+    }
+  }
 
   onMount(() => {
     preloadedImgs = preloadImages(imgConfig.images);
@@ -25,7 +37,7 @@
     {#each imgConfig.stickers as sticker}
       <Sticker {sticker} isDoodle={false} />
     {/each}
-    <div class="{imgConfig.size} shrink-0">
+    <div ontouchstart={handleTouchStart} ontouchend={handleTouchEnd} role="region" class="{imgConfig.size} shrink-0">
       {#each imgConfig.images as image, i}
         {#if i === currentImg}
           <img class="{imgConfig.size} object-fill shadow-xl" src={image} alt="projectPhoto" in:fade={{duration: 100}}/>

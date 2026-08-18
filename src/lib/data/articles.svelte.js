@@ -44,15 +44,15 @@ export const articles = [
     imgConfig: {
       imgLeft: true,
       images: [pageBuilder],
-      size: "h-100",  
+      size: "w-85 md:w-165",  
       stickers: [
-        { img: stickerRight1, styling: "", position:"-right-10 -top-10" },
-        { img: stickerRight2, styling: "", position:"-left-10 -bottom-10" },
+        { img: stickerRight1, styling: "", position:"-right-5 -top-7 md:-right-10 md:-top-10" },
+        { img: stickerRight2, styling: "", position:"-left-7 -bottom-7 md:-left-10 md:-bottom-10" },
       ],
     },
     doodles: [
-      { img: drag, styling: "w-29", position:"-top-16 right-8 -rotate-30" },
-      { img: puzzle, styling: "w-50", position:"-bottom-20 -right-200" },
+      { img: drag, styling: "w-15 md:w-29", position:"-top-10 -right-5 md:-top-16 md:right-8 -rotate-30" },
+      { img: puzzle, styling: "w-30 md:w-50", position:"-bottom-5 right-10 md:-bottom-135 lg:-bottom-20 lg:-right-200" },
     ],
     tech: ["Angular", "TypeScript", "JSON", "C#", "Anthropic API", "SCSS"]
   },
@@ -69,17 +69,17 @@ export const articles = [
     imgConfig: {
       imgLeft: false,
       images: [looney1, looney2, looney3],
-      size: "h-120",
+      size: "h-80 md:h-120",
       stickers: [
-        { img: stickerBottom, styling:"", position: "-top-8" },
-        { img: stickerTop, styling:"", position: "-bottom-20" }
+        { img: stickerBottom, styling:"", position: "-top-5 md:-top-8" },
+        { img: stickerTop, styling:"", position: "-bottom-12 md:-bottom-20" }
       ],
     },
     doodles: [
-      { img: robot, styling: "w-29", position:"-left-152 -top-12" },
-      { img: dragon, styling: "w-47", position:"-bottom-25 -right-55" },
+      { img: robot, styling: "w-15 md:w-29", position:"-left-5 -top-5 lg:-left-152 md:-top-12" },
+      { img: dragon, styling: "w-25 md:w-47", position:"-bottom-115 -right-6 lg:-bottom-20 lg:-right-55" },
     ],
-    tech: ["SvelteKit", "Tailwind", "Microservices", "Docker", "JavaScript"]
+    tech: ["SvelteKit", "Tailwind", "JavaScript", "Microservices", "Docker"]
   },
   {
     title: "Curious Village",
@@ -95,15 +95,15 @@ export const articles = [
     imgConfig: {
       imgLeft: true,
       images: [curiousVillage1, curiousVillage2, curiousVillage3],
-      size: "h-90",
+      size: "h-60 md:h-90",
       stickers: [
-        { img: stickerLeft1, styling:"", position: "-left-11 -top-11" },
-        { img: stickerLeft2, styling:"", position: "-right-11 -bottom-11" },
+        { img: stickerLeft1, styling:"", position: "-left-7 -top-7 md:-left-11 md:-top-11" },
+        { img: stickerLeft2, styling:"", position: "-right-7 -bottom-7 md:-right-11 md:-bottom-11" },
       ],
     },
     doodles: [
-      { img: cup, styling: "w-29", position:"-top-20 -right-32"},
-      { img: controller, styling: "w-36", position:"-bottom-12 right-36" },
+      { img: cup, styling: "w-20 md:w-29", position:"-bottom-95 right-0 md:-top-20 lg:-right-32"},
+      { img: controller, styling: "w-25 lg:w-36", position:"-bottom-5 right-5 lg:-bottom-12 md:right-36" },
     ],
     tech: ["TypeScript"]
   },
@@ -118,12 +118,12 @@ export const articles = [
     imgConfig: {
       imgLeft: false,
       images: [manageMe1, manageMe2, manageMe3],
-      size: "w-170",
-      stickers: [{ img: stickerTop, styling: "", position:"-top-8" }],
+      size: "w-85 md:w-170",
+      stickers: [{ img: stickerTop, styling: "", position:"-top-5 md:-top-8" }],
     },
     doodles: [
-      { img: chart, styling: "w-29", position:"-top-20 left-15" },
-      { img: book, styling: "w-32", position:"-bottom-18 -left-200" },
+      { img: chart, styling: "w-15 md:w-29", position:"-top-10 lg:-top-20 md:left-15" },
+      { img: book, styling: "w-18 md:w-32", position:"-bottom-5 right-5 md:-bottom-145 lg:-bottom-18 lg:-left-200" },
     ],
     tech: ["SvelteKit", "Tailwind", "JavaScript", "MySQL", "D3.js"]
   },
@@ -139,15 +139,15 @@ export const articles = [
     imgConfig: {
       imgLeft: true,
       images: [sunLay1, sunLay2, sunLay3],
-      size: "w-170",
+      size: "w-85 md:w-170",
       stickers: [
-        { img: stickerLeft1, styling: "", position:"-right-10 -bottom-10" },
-        { img: stickerLeft2, styling: "", position:"-left-10 -top-10" },
+        { img: stickerLeft1, styling: "", position:"-right-5 -bottom-7 md:-right-10 md:-bottom-10" },
+        { img: stickerLeft2, styling: "", position:"-left-7 -top-7 md:-left-10 md:-top-10" },
       ],
     },
     doodles: [
-      { img: sun, styling: "w-29", position:"-top-22 -right-185" },
-      { img: energy, styling: "w-14", position:"-bottom-5 -right-30" },
+      { img: sun, styling: "w-20 md:w-29", position:"-top-15 right-5 md:-top-22 lg:-right-185" },
+      { img: energy, styling: "w-7 md:w-14", position:"-bottom-80 right-5 md:-bottom-140 lg:-bottom-5 lg:-right-30" },
     ],
     tech: ["React", "TypeScript", "Python", "Blender", "Three.js"]
   }
@@ -159,7 +159,7 @@ export const aboutMeArticle = {
           I am now on a hunt for a **junior** dev role. What I enjoy is creating and designing 
           **websites** and **web apps** while making sure they feel **nice to use** 
           (and I chase it in every project I create). Outside of code, you can find me 
-          **working out my brain** with Japanese nonograms, crosswords, sudoku, or any other logical puzzle.`,
+          **working out my brain** with Japanese nonogram, crosswords, sudoku, or any other logical puzzle.`,
   links: [
     { img: gitHub, href: "https://github.com/JessicaDinova"},
     { img: linkedIn, href: "https://www.linkedin.com/in/jessica-diňová-0b182a27a"}

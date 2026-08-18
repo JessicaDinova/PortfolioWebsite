@@ -5,9 +5,9 @@
   const textSegments = $derived(highlightText(aboutMeArticle.text));
 </script>
 
-<div class="main font-light flex flex-row justify-center gap-[10%] items-center">
-  <img class="w-112.5 drop-shadow-xl" src={profilePic} alt="profilePic">
-  <div class="text-2xl text-justify w-[45%] max-w-3xl flex flex-col gap-5">
+<div class="pageShell font-light flex flex-col lg:flex-row axesCenter gap-10 lg:gap-30">
+  <img class="w-80 md:w-112.5 drop-shadow-xl" src={profilePic} alt="profilePic">
+  <div class="text-xl md:text-2xl text-justify w-[80%] lg:w-[45%] max-w-3xl flex flex-col gap-5">
     <article>
       {#each textSegments as segment}
         {#if segment.highlight}

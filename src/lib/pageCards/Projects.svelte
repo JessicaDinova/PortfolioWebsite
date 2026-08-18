@@ -13,12 +13,20 @@
   let { scrollToSection } = $props();
   let currentIndex = $state(0);
   let transitionDirection = $state(-100);
-  let itemsPerView = 4;
-    //reference to prevent garbage collection of images
+  let itemsPerView = $state(4);
   let preloadedImages = [];
-
-  onMount(() =>{
+  
+  onMount(() => {
+    const handleResize = () => {
+      const isMedium = window.innerWidth < 1300;
+      const isSmall = window.innerWidth < 1000;
+      itemsPerView = isSmall ? 2 : (isMedium ? 3 : 4);
+    }
+    handleResize();
+    window.addEventListener('resize', handleResize);
     preloadedImages = preloadImages(projects, 'img');
+
+    return () => window.removeEventListener('resize', handleResize);
   })
 
   function nextSlide() {
@@ -42,9 +50,9 @@
   let visibleProjects = $derived(getCircularSlice(projects, currentIndex, itemsPerView));
 </script>
 
-<div class="main relative overflow-hidden justify-center items-center flex flex-row gap-8">
+<div class="pageShell relative overflow-hidden axesCenter flex flex-row gap-8">
   <img
-    class="w-[13%] absolute bottom-0 left-0"
+    class="w-[20%] lg:w-[13%] absolute bottom-0 left-0"
     src={queenDoodle}
     alt="doodle"
   />

@@ -7,28 +7,29 @@
 
   let { article } = $props();
 
-  const flexDirection = $derived(article.imgConfig.imgLeft ? "flex-row" : "flex-row-reverse");
-  const justifyDirection = $derived(article.imgConfig.imgLeft ? "justify-start" : "justify-end");
+  const flexDirection = $derived(article.imgConfig.imgLeft ? "lg:flex-row" : "lg:flex-row-reverse");
+  const justifyDirection = $derived(article.imgConfig.imgLeft ? "lg:justify-start" : "lg:justify-end");
   const darkModeText = $derived(article.darkStyle ? "text-cream-100" : "");
   const textHighlight = $derived(article.darkStyle? "highlightDark" : "highlight");
   const textSegments = $derived(highlightText(article.text));
   const githubTheme = $derived(article.darkStyle ? githubDark : githubLight);
+  const shouldSpan = (text) => text.length > 10;
 </script>
 
-<div class="main gap-32 overflow-hidden justify-center px-10 items-center flex {flexDirection} {darkModeText}">
-  <div class="relative w-[40%] max-w-3xl flex flex-col gap-7">  
+<div class="pageShell gap-10 lg:gap-32 overflow-hidden axesCenter py-15 px-8 lg:px-10 flex flex-col {flexDirection} {darkModeText}">
+  <div class="relative w-full md:w-[90%] lg:w-[40%] lg:max-w-3xl flex flex-col gap-7">  
     {#each article.doodles as doodle}
       <Sticker sticker={doodle}/>
     {/each}
-    <div class="flex flex-row gap-2 {justifyDirection}">
-      <h1 class="text-4xl uppercase font-hand font-medium text-lavander-100 text-shadow-boldest">{article.title}</h1>
+    <div class="flex flex-row gap-2 justify-center items-center {justifyDirection}">
+      <h1 class="text-[2.2rem] uppercase font-hand font-medium text-lavander-100 text-shadow-boldest">{article.title}</h1>
       {#if article.link}
         <a href={article.link} target="_blank">
           <img class="h-10 hover:scale-105 transitional" src={githubTheme} alt="github" />
         </a>
       {/if}
     </div>
-    <article class="text-2xl font-light text-justify">
+    <article class="text-xl md:text-2xl font-light text-justify">
       {#each textSegments as segment}
         {#if segment.highlight}
           <span class="{textHighlight}">{segment.text}</span>
@@ -37,15 +38,16 @@
         {/if}
       {/each}
     </article>
-    <div class="w-full justify-between py-2 whitespace-nowrap flex">
+    <div class="w-full py-2 grid grid-cols-3 gap-2 md:flex md:flex-nowrap md:justify-between md:gap-0">
       {#each article.tech as tech}
-        <div class="border-2 border-lavander-100 whitespace-nowrap bg-lavander-50 p-3 rounded-4xl hover:scale-105 transition ease-in-out cursor-default">
-          <p>{tech}</p>
+        {@const span = shouldSpan(tech) ? 'col-span-2' : 'col-span-1'}
+          <div class="border-2 border-lavander-100 bg-lavander-50 p-3 rounded-4xl hover:scale-105 transitional cursor-default md:flex-none {span}">
+          <p class="text-center text-sm md:text-base md:whitespace-nowrap wrap-break-word">{tech}</p>
         </div>
       {/each}
     </div>
   </div>
-  <div class="flex justify-center items-center">
+  <div class="flex axesCenter">
     <ImageCarousel imgConfig={article.imgConfig}/>
   </div>
 </div>
