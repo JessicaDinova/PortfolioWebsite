@@ -1,3 +1,4 @@
+[![Deploy](https://github.com/JessicaDinova/PortfolioWebsite/actions/workflows/deploy.yaml/badge.svg)](https://github.com/JessicaDinova/PortfolioWebsite/actions/workflows/deploy.yaml)
 # Portfolio Website <img src="https://github.com/JessicaDinova/PortfolioWebsite/blob/main/src/lib/assets/favicon.svg?raw=true" alt="Crown" width="30" height="30" style="vertical-align: middle;">
 A complete remake of my original portfolio, built with Svelte and SvelteKit.
 
